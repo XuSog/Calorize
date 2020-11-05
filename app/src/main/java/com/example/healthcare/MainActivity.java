@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Layout;
 import android.view.View;
@@ -28,6 +29,11 @@ public class MainActivity extends AppCompatActivity {
     EditText nameUser;
     EditText studentID;
     Button saveButton;
+    Button femaleButton;
+    Button maleButton;
+    EditText userHeight;
+    EditText userWeight;
+    EditText userAge;
 
     @Override
     public void onBackPressed() {
@@ -36,11 +42,7 @@ public class MainActivity extends AppCompatActivity {
                     .setTitle("Exit?")
                     .setMessage("Are you going to exit the app?")
                     .setNegativeButton(android.R.string.no, null)
-                    .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
-                        public void onClick(DialogInterface arg0, int arg1) {
-                            MainActivity.super.onBackPressed();
-                        }
-                    }).create().show();
+                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> MainActivity.super.onBackPressed()).create().show();
         }
         else {
             changeLayout(parentLayout.get(parentLayout.size() - 1));
@@ -53,7 +55,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("Calorize");
         changeLayout(R.layout.activity_main);
-
     }
 
     protected void changeLayout(int layout){
@@ -79,9 +80,88 @@ public class MainActivity extends AppCompatActivity {
             nameUser = findViewById(R.id.nameUser);
             studentID = findViewById(R.id.studentID);
             saveButton = findViewById(R.id.saveButtonId);
+            userHeight = findViewById(R.id.userHeight);
+            userWeight = findViewById(R.id.userWeight);
+            femaleButton = findViewById(R.id.femaleButton);
+            maleButton = findViewById(R.id.maleButton);
+            userAge = findViewById(R.id.userAge);
+            final String[] gender = {"male"};
+
+            if (!data.get(0).equals("Name")) nameUser.setText(data.get(0));
+            if (!data.get(1).equals("Student ID")) studentID.setText(data.get(1));
+            if (!data.get(2).equals("Height")) userHeight.setText(data.get(2));
+            if (!data.get(3).equals("Weight")) userWeight.setText(data.get(3));
+            if (!data.get(4).equals("Age")) userAge.setText(data.get(4));
+            if (!data.get(5).equals(gender[0])) {
+                femaleButton.setTextColor(Color.RED);
+                maleButton.setTextColor(Color.BLACK);
+            }
+            else {
+                maleButton.setTextColor(Color.RED);
+                femaleButton.setTextColor(Color.BLACK);
+            }
+
+            femaleButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    femaleButton.setTextColor(Color.RED);
+                    maleButton.setTextColor(Color.BLACK);
+                    gender[0] = "female";
+                }
+            });
+
+            maleButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    maleButton.setTextColor(Color.RED);
+                    femaleButton.setTextColor(Color.BLACK);
+                    gender[0] = "male";
+                }
+            });
+
             saveButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    data.set(5,gender[0]);
+                    if (! userHeight.getText().toString().isEmpty()) {
+                        try{
+                            int height = Integer.parseInt(userHeight.getText().toString());
+                            if (height <= 0) throw new Exception();
+                            data.set(2, userHeight.getText().toString());
+                        }
+                        catch (Exception e){
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle("Wrong Format")
+                                    .setMessage("Your height should be a positive integer.")
+                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userHeight.setText(data.get(2))).create().show();
+                        }
+                    }
+                    if (! userWeight.getText().toString().isEmpty()) {
+                        try{
+                            int weight = Integer.parseInt(userWeight.getText().toString());
+                            if (weight <= 0) throw new Exception();
+                            data.set(3, userWeight.getText().toString());
+                        }
+                        catch (Exception e){
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle("Wrong Format")
+                                    .setMessage("Your weight should be a positive integer.")
+                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userWeight.setText(data.get(3))).create().show();
+                        }
+                    }
+                    if (! userAge.getText().toString().isEmpty()) {
+                        try{
+                            int age = Integer.parseInt(userAge.getText().toString());
+                            if (age <= 0 || age > 150) throw new Exception();
+                            data.set(4, userAge.getText().toString());
+                        }
+                        catch (Exception e){
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle("Wrong Format")
+                                    .setMessage("Your age should be a positive integer between 1 to 150.")
+                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userAge.setText(data.get(4))).create().show();
+                        }
+                    }
                     if (! nameUser.getText().toString().isEmpty()) {
                         data.set(0, nameUser.getText().toString());
                     }
@@ -115,6 +195,10 @@ public class MainActivity extends AppCompatActivity {
             data = new ArrayList<String>();
             data.add("Name");
             data.add("Student ID");
+            data.add("Height");
+            data.add("Weight");
+            data.add("Age");
+            data.add("male");
         }
     }
 }
