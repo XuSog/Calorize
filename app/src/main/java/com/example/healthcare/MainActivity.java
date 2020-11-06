@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     EditText nameUser;
     EditText studentID;
     Button saveButton;
+    Button cancelButton;
     Button femaleButton;
     Button maleButton;
     EditText userHeight;
@@ -73,13 +74,13 @@ public class MainActivity extends AppCompatActivity {
             view.setText(data.get(0));
             view = findViewById(R.id.studentIDBox);
             view.setText(data.get(1));
-
         }
 
         if ( layout == R.layout.profile) {
             nameUser = findViewById(R.id.nameUser);
             studentID = findViewById(R.id.studentID);
             saveButton = findViewById(R.id.saveButtonId);
+            cancelButton = findViewById(R.id.cancelButton);
             userHeight = findViewById(R.id.userHeight);
             userWeight = findViewById(R.id.userWeight);
             femaleButton = findViewById(R.id.femaleButton);
@@ -92,6 +93,7 @@ public class MainActivity extends AppCompatActivity {
             if (!data.get(2).equals("Height")) userHeight.setText(data.get(2));
             if (!data.get(3).equals("Weight")) userWeight.setText(data.get(3));
             if (!data.get(4).equals("Age")) userAge.setText(data.get(4));
+
             if (!data.get(5).equals(gender[0])) {
                 femaleButton.setTextColor(Color.RED);
                 maleButton.setTextColor(Color.BLACK);
@@ -100,6 +102,13 @@ public class MainActivity extends AppCompatActivity {
                 maleButton.setTextColor(Color.RED);
                 femaleButton.setTextColor(Color.BLACK);
             }
+
+            cancelButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    MainActivity.this.onBackPressed();
+                }
+            });
 
             femaleButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -123,56 +132,16 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     data.set(5,gender[0]);
-                    if (! userHeight.getText().toString().isEmpty()) {
-                        try{
-                            int height = Integer.parseInt(userHeight.getText().toString());
-                            if (height <= 0) throw new Exception();
-                            data.set(2, userHeight.getText().toString());
-                        }
-                        catch (Exception e){
-                            new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle("Wrong Format")
-                                    .setMessage("Your height should be a positive integer.")
-                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userHeight.setText(data.get(2))).create().show();
-                        }
-                    }
-                    if (! userWeight.getText().toString().isEmpty()) {
-                        try{
-                            int weight = Integer.parseInt(userWeight.getText().toString());
-                            if (weight <= 0) throw new Exception();
-                            data.set(3, userWeight.getText().toString());
-                        }
-                        catch (Exception e){
-                            new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle("Wrong Format")
-                                    .setMessage("Your weight should be a positive integer.")
-                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userWeight.setText(data.get(3))).create().show();
-                        }
-                    }
-                    if (! userAge.getText().toString().isEmpty()) {
-                        try{
-                            int age = Integer.parseInt(userAge.getText().toString());
-                            if (age <= 0 || age > 150) throw new Exception();
-                            data.set(4, userAge.getText().toString());
-                        }
-                        catch (Exception e){
-                            new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle("Wrong Format")
-                                    .setMessage("Your age should be a positive integer between 1 to 150.")
-                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userAge.setText(data.get(4))).create().show();
-                        }
-                    }
-                    if (! nameUser.getText().toString().isEmpty()) {
-                        data.set(0, nameUser.getText().toString());
-                    }
-                    if (! studentID.getText().toString().isEmpty()) {
-                        data.set(1, studentID.getText().toString());
-                    }
+                    if (! userHeight.getText().toString().isEmpty()) data.set(2, userHeight.getText().toString());
+                    if (! userWeight.getText().toString().isEmpty()) data.set(3, userWeight.getText().toString());
+                    if (! userAge.getText().toString().isEmpty()) data.set(4, userAge.getText().toString());
+                    if (! nameUser.getText().toString().isEmpty()) data.set(0, nameUser.getText().toString());
+                    if (! studentID.getText().toString().isEmpty()) data.set(1, studentID.getText().toString());
                     saveData();
+                    MainActivity.this.onBackPressed();
                 }
             });
         }
-
     }
 
     private void saveData() {

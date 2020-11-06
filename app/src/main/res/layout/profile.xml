@@ -13,7 +13,8 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-
+        android:maxLines="1"
+        android:inputType= "text"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
@@ -27,7 +28,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-
+        android:inputType= "numberDecimal"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
@@ -41,13 +42,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-
+        android:inputType= "numberDecimal"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
 
-        android:hint="Height"
+        android:hint="Height (cm)"
         android:textSize="40dp" />
 
     <EditText
@@ -55,13 +56,13 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-
+        android:inputType= "numberDecimal"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
 
-        android:hint="Weight"
+        android:hint="Weight (kg)"
         android:textSize="40dp" />
 
     <LinearLayout
@@ -83,7 +84,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="Male"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
 
         <Button
             android:id="@+id/femaleButton"
@@ -95,7 +96,7 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:text="Female"
-            android:textSize="40dp" />
+            android:textSize="30dp" />
     </LinearLayout>
 
     <EditText
@@ -107,22 +108,46 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
+        android:inputType= "numberDecimal"
         android:hint="Age"
         android:textSize="40dp" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_weight="1">
+
+    <Button
+        android:id="@+id/cancelButton"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:paddingLeft="16dp"
+        android:paddingTop="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:text="Cancel"
+        android:textSize="32dp" />
+
     <Button
         android:id="@+id/saveButtonId"
-        android:layout_width="198dp"
-        android:layout_height="0dp"
-        android:layout_gravity="right"
-
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
         android:layout_weight="1"
         android:paddingLeft="16dp"
         android:paddingTop="16dp"
         android:paddingRight="16dp"
         android:paddingBottom="16dp"
         android:text="Save"
-        android:textSize="40dp" />
+        android:textSize="32dp" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>
