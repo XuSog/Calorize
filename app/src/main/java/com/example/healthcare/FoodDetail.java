@@ -130,12 +130,11 @@ public class FoodDetail extends AppCompatActivity {
         editor.putString("food data", json);
         editor.apply();
     }
-
-    // to be implemented
+    
     private String[] getData(){
         Intent intent = getIntent();
         List<String> dataGet = intent.getStringArrayListExtra(HealthySoupActivity.KEY);
-        String[] foodDetail = dataGet.toArray(new String[0]);  //to be replaced with actual value
+        String[] foodDetail = dataGet.toArray(new String[0]);
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString("data list", null);
