@@ -32,6 +32,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.List;
 
 public class FoodDetail extends AppCompatActivity {
 
@@ -63,8 +64,8 @@ public class FoodDetail extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-                Toast.makeText(FoodDetail.this, "Selected",Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(FoodDetail.this, data[0] + " Selected",Toast.LENGTH_SHORT).show();
+                finish();
             }
         });
         barChart = findViewById(R.id.BarChart);
@@ -128,15 +129,13 @@ public class FoodDetail extends AppCompatActivity {
         json = gson.toJson(foodData);
         editor.putString("food data", json);
         editor.apply();
-        name.setText(String.valueOf(foodData.size()));
-        System.out.println(foodData);
     }
 
     // to be implemented
     private String[] getData(){
         Intent intent = getIntent();
-
-        String[] foodDetail = new String[]{"Pasta", "123", "13", "32", "232"};  //to be replaced with actual value
+        List<String> dataGet = intent.getStringArrayListExtra(HealthySoupActivity.KEY);
+        String[] foodDetail = dataGet.toArray(new String[0]);  //to be replaced with actual value
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString("data list", null);
@@ -144,15 +143,19 @@ public class FoodDetail extends AppCompatActivity {
         ArrayList<String> data = gson.fromJson(json, type);
         User user = new User(Double.valueOf(data.get(2)),Double.valueOf(data.get(3)), data.get(5),Integer.valueOf(data.get(4)));
         String[] dataAdvised = user.advise();
-        String[] dataString = new String[4];
-        dataString[0] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[1])/Double.valueOf(dataAdvised[0]))));
-        dataString[1] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[2])/Double.valueOf(dataAdvised[1]))));
-        dataString[2] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[3])/Double.valueOf(dataAdvised[2]))));
-        dataString[3] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[4])/Double.valueOf(dataAdvised[3]))));
-        String[] output = Arrays.copyOf(dataString,dataString.length + 1);
-        output[0] = foodDetail[0];
-        System.arraycopy(dataString, 0, output, 1, dataString.length);
-        return output;
+        for (String i: dataAdvised){
+            System.out.println(i);
+        }
+        String[] dataString = new String[5];
+        dataString[0] = foodDetail[0];
+        dataString[1] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[1])*100/Double.valueOf(dataAdvised[0]))));
+        dataString[2] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[2])*100/Double.valueOf(dataAdvised[1]))));
+        dataString[3] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[3])*100/Double.valueOf(dataAdvised[2]))));
+        dataString[4] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[4])*100/Double.valueOf(dataAdvised[3]))));
+        for (String i: dataString){
+            System.out.println(i);
+        }
+        return dataString;
     }
 
 
@@ -184,7 +187,7 @@ public class FoodDetail extends AppCompatActivity {
             result[1]=protein.toString();
             result[2]=cholesterol.toString();
             result[3]=fat.toString().substring(0,4);
-            return  result;
+            return result;
         }
 
     }

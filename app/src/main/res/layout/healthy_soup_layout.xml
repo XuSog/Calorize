@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HealthySoupActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/porkSoupButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/whiteRiceButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/brownRiceButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/vegetableButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/tufoButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/pigEarButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/pigTongueButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/chickenMeatButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+        <com.example.healthcare.CustomImageButton
+
+            android:id="@+id/chickenLiverButton"
+            android:contentDescription="@string/app_name"
+
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+
+            android:background="@drawable/sys1d" />
+
+
+    </LinearLayout>
+</ScrollView>

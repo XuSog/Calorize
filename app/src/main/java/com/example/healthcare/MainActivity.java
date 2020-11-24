@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -28,6 +31,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<String> data = null;
     EditText nameUser;
     EditText studentID;
+    Button buttonOne;
     Button saveButton;
     Button cancelButton;
     Button femaleButton;
@@ -74,6 +78,15 @@ public class MainActivity extends AppCompatActivity {
             view.setText(data.get(0));
             view = findViewById(R.id.studentIDBox);
             view.setText(data.get(1));
+
+            buttonOne = findViewById(R.id.buttonOne);
+            buttonOne.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(MainActivity.this, HealthySoupActivity.class);
+                    startActivity(intent);
+                }
+            });
         }
 
         if ( layout == R.layout.profile) {
@@ -106,6 +119,7 @@ public class MainActivity extends AppCompatActivity {
             cancelButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+                    Toast.makeText(MainActivity. this, "Changes discarded",Toast.LENGTH_LONG).show();
                     MainActivity.this.onBackPressed();
                 }
             });
@@ -138,6 +152,7 @@ public class MainActivity extends AppCompatActivity {
                     if (! nameUser.getText().toString().isEmpty()) data.set(0, nameUser.getText().toString());
                     if (! studentID.getText().toString().isEmpty()) data.set(1, studentID.getText().toString());
                     saveData();
+                    Toast.makeText(MainActivity. this, "Information saved",Toast.LENGTH_LONG).show();
                     MainActivity.this.onBackPressed();
                 }
             });
