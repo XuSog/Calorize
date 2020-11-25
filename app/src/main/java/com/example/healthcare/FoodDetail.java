@@ -1,14 +1,19 @@
 package com.example.healthcare;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -48,10 +53,27 @@ public class FoodDetail extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        try{
+            data = getData();
+        } catch (Exception e) {
+            Toast.makeText(FoodDetail.this, e.toString(),Toast.LENGTH_LONG).show();
+            finish();
+        }
         setContentView(R.layout.food_detail);
-        data = getData();
-        name = findViewById(R.id.name);
-        name.setText(data[0]);
+        ImageView picture = findViewById(R.id.picture);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null){
+            int temp = bundle.getInt("picture");
+            picture.setImageResource(temp);
+        }
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setBackgroundColor(Color.BLACK);
+        toolbar.setTitle(data[0]);
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { finish(); }
+        });
         cancelButton = findViewById(R.id.cancelButtonFD);
         cancelButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -134,6 +156,9 @@ public class FoodDetail extends AppCompatActivity {
     private String[] getData(){
         Intent intent = getIntent();
         List<String> dataGet = intent.getStringArrayListExtra(HealthySoupActivity.KEY);
+        for (String i : dataGet){
+            System.out.println(i);
+        }
         String[] foodDetail = dataGet.toArray(new String[0]);
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
         Gson gson = new Gson();
@@ -142,21 +167,14 @@ public class FoodDetail extends AppCompatActivity {
         ArrayList<String> data = gson.fromJson(json, type);
         User user = new User(Double.valueOf(data.get(2)),Double.valueOf(data.get(3)), data.get(5),Integer.valueOf(data.get(4)));
         String[] dataAdvised = user.advise();
-        for (String i: dataAdvised){
-            System.out.println(i);
-        }
         String[] dataString = new String[5];
         dataString[0] = foodDetail[0];
-        dataString[1] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[1])*100/Double.valueOf(dataAdvised[0]))));
-        dataString[2] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[2])*100/Double.valueOf(dataAdvised[1]))));
-        dataString[3] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[3])*100/Double.valueOf(dataAdvised[2]))));
+        dataString[1] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[1])*200/Double.valueOf(dataAdvised[0]))));
+        dataString[2] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[2])*200/Double.valueOf(dataAdvised[1]))));
+        dataString[3] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[3])*300/Double.valueOf(dataAdvised[2]))));
         dataString[4] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[4])*100/Double.valueOf(dataAdvised[3]))));
-        for (String i: dataString){
-            System.out.println(i);
-        }
         return dataString;
     }
-
 
     class User {
         private double height,weight;
@@ -167,7 +185,6 @@ public class FoodDetail extends AppCompatActivity {
             this.weight=weight;
             this.sex=sex;
             this.year=year;
-
         }
         public String[] advise(){
             String[] result=new String[4];
@@ -182,13 +199,12 @@ public class FoodDetail extends AppCompatActivity {
             }
             cholesterol=new BigDecimal(600);
             fat=energy.multiply(new BigDecimal(0.25*0.111));
-            result[0]=energy.toString().substring(0,6);
+            result[0]=energy.toString().substring(0,4);
             result[1]=protein.toString();
             result[2]=cholesterol.toString();
             result[3]=fat.toString().substring(0,4);
             return result;
         }
-
     }
 
 }

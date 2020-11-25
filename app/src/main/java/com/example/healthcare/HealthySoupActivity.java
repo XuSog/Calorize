@@ -2,16 +2,20 @@ package com.example.healthcare;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import java.io.ByteArrayOutputStream;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
 
@@ -29,14 +33,21 @@ public class HealthySoupActivity extends AppCompatActivity {
 
     public static String KEY="";
 
-
     ArrayList<String> data=new ArrayList<>();
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.healthy_soup_layout);
+
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setBackgroundColor(Color.BLACK);
+        toolbar.setTitle("Healthy Soup");
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { finish(); }
+        });
 
         porkSoupButton=findViewById(R.id.porkSoupButton);
         whiteRiceButton=findViewById(R.id.whiteRiceButton);
@@ -98,8 +109,8 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("18");
                 data.add("6");
                 data.add("41.36");
-                Log.e("TAG",data.get(0));
                 intent.putExtra(KEY,data);
+                intent.putExtra("picture", R.drawable.sys1d);  // to be replaced as well !!!!!!!
                 startActivity(intent);
             }
         });

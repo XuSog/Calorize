@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HealthySoupActivity">
+    tools:context=".CanteenActivity"
+    android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent" >
+        android:layout_height="match_parent">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
@@ -29,8 +29,9 @@
 
         <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/porkSoupButton"
+            android:id="@+id/drinksStoreButton"
             android:contentDescription="@string/app_name"
+
 
             android:layout_width="match_parent"
             android:layout_height="150dp"
@@ -39,17 +40,7 @@
 
         <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/whiteRiceButton"
-            android:contentDescription="@string/app_name"
-
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-
-            android:background="@drawable/sys1d" />
-
-        <com.example.healthcare.CustomImageButton
-
-            android:id="@+id/brownRiceButton"
+            android:id="@+id/muslimStoreButton"
             android:contentDescription="@string/app_name"
 
             android:layout_width="match_parent"
@@ -60,7 +51,7 @@
 
         <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/vegetableButton"
+            android:id="@+id/indianStoreButton"
             android:contentDescription="@string/app_name"
 
             android:layout_width="match_parent"
@@ -71,7 +62,7 @@
 
         <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/tufoButton"
+            android:id="@+id/japKoreanStoreButton"
             android:contentDescription="@string/app_name"
 
             android:layout_width="match_parent"
@@ -82,7 +73,7 @@
 
         <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/pigEarButton"
+            android:id="@+id/healthySoupStoreButton"
             android:contentDescription="@string/app_name"
 
             android:layout_width="match_parent"
@@ -93,7 +84,7 @@
 
         <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/pigTongueButton"
+            android:id="@+id/chickenRiceStoreButton"
             android:contentDescription="@string/app_name"
 
             android:layout_width="match_parent"
@@ -104,17 +95,7 @@
 
         <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/chickenMeatButton"
-            android:contentDescription="@string/app_name"
-
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-
-            android:background="@drawable/sys1d" />
-
-        <com.example.healthcare.CustomImageButton
-
-            android:id="@+id/chickenLiverButton"
+            android:id="@+id/westernStoreButton"
             android:contentDescription="@string/app_name"
 
             android:layout_width="match_parent"
@@ -126,4 +107,5 @@
 
     </LinearLayout>
     </ScrollView>
+
 </LinearLayout>

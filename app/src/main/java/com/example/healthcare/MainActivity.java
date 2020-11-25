@@ -4,13 +4,17 @@ import androidx.activity.OnBackPressedCallback;
 import androidx.annotation.LayoutRes;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Layout;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -18,6 +22,8 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -29,16 +35,8 @@ public class MainActivity extends AppCompatActivity {
     ImageButton profileButton;
     ArrayList<Integer> parentLayout = new ArrayList<Integer>();
     ArrayList<String> data = null;
-    EditText nameUser;
-    EditText studentID;
-    Button buttonOne;
-    Button saveButton;
-    Button cancelButton;
-    Button femaleButton;
-    Button maleButton;
-    EditText userHeight;
-    EditText userWeight;
-    EditText userAge;
+    EditText nameUser, studentID, userHeight, userWeight, userAge;
+    Button buttonOne, saveButton, cancelButton, femaleButton, maleButton;
 
     @Override
     public void onBackPressed() {
@@ -62,6 +60,43 @@ public class MainActivity extends AppCompatActivity {
         changeLayout(R.layout.activity_main);
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.menu_main, menu);
+        return true;
+    }
+
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.quit_settings) {
+            MainActivity.this.onBackPressed();
+        }
+
+        if (id == R.id.setup_settings) {
+            parentLayout.add(R.layout.activity_main);
+            changeLayout(R.layout.profile);
+        }
+
+        if (id == R.id.reset_settings) {
+            data.clear();
+            data.add("Name");
+            data.add("Student ID");
+            data.add("Height");
+            data.add("Weight");
+            data.add("Age");
+            data.add("male");
+            saveData();
+            TextView view = findViewById(R.id.userName);
+            view.setText(data.get(0));
+            view = findViewById(R.id.studentIDBox);
+            view.setText(data.get(1));
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
+
     protected void changeLayout(int layout){
         setContentView(layout);
         if (layout == R.layout.activity_main) {
@@ -73,6 +108,7 @@ public class MainActivity extends AppCompatActivity {
                     changeLayout(R.layout.profile);
                 }
             });
+
             loadData();
             TextView view = findViewById(R.id.userName);
             view.setText(data.get(0));
@@ -83,13 +119,30 @@ public class MainActivity extends AppCompatActivity {
             buttonOne.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent intent = new Intent(MainActivity.this, HealthySoupActivity.class);
+                    if (data.get(2).equals("Height") || data.get(3).equals("Weight") || data.get(4).equals("Age")){
+                        Toast.makeText(MainActivity. this, "Please set up your information first",Toast.LENGTH_LONG).show();
+                        return;
+                    }
+                    Intent intent = new Intent(MainActivity.this, CanteenActivity.class);
                     startActivity(intent);
                 }
             });
+
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            toolbar.setBackgroundColor(Color.BLACK);
         }
 
         if ( layout == R.layout.profile) {
+            Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+            setSupportActionBar(toolbar);
+            toolbar.setBackgroundColor(Color.BLACK);
+            toolbar.setTitle("Setup Information");
+            toolbar.setNavigationIcon(R.drawable.back);
+            toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) { finish(); }
+            });
             nameUser = findViewById(R.id.nameUser);
             studentID = findViewById(R.id.studentID);
             saveButton = findViewById(R.id.saveButtonId);
@@ -177,12 +230,6 @@ public class MainActivity extends AppCompatActivity {
 
         if (data == null || data.isEmpty()) {
             data = new ArrayList<String>();
-            data.add("Name");
-            data.add("Student ID");
-            data.add("Height");
-            data.add("Weight");
-            data.add("Age");
-            data.add("male");
         }
     }
 }

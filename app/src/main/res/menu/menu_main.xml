@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.healthcare.MainActivity">
+
+    <item
+        android:id="@+id/setup_settings"
+        android:orderInCategory="90"
+        android:title="Setup"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/reset_settings"
+        android:orderInCategory="100"
+        android:title="Reset"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/quit_settings"
+        android:orderInCategory="120"
+        android:title="Quit"
+        app:showAsAction="never" />
+
+</menu>
