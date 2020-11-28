@@ -11,6 +11,8 @@
         android:theme="@style/Theme.HealthCare">
         <activity android:name=".CanteenActivity"
             android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".EnergyActivity"
+            android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".HealthySoupActivity"
             android:parentActivityName=".CanteenActivity"></activity>
         <activity

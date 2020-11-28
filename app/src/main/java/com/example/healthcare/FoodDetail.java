@@ -50,6 +50,31 @@ public class FoodDetail extends AppCompatActivity {
     TextView name;
     String[] data;
 
+    Double DayEnergy;
+    Double WeekEnergy;
+    Double MonthEnergy;
+
+
+    Integer dayDate;
+    Integer weekDate;
+    Integer monthDate;
+
+    Integer preDayDate;
+    Integer preWeekDate;
+    Integer preMonthDate;
+    Calendar calendar = Calendar.getInstance();
+
+    public static SharedPreferences mPreferences;
+    public static final String sharedPrefFile = "com.example.android.mainsharedprefs";
+
+    public static final String DAY_DATE_KEY= "DAY DATE KEY";
+    public static final String WEEK_DATE_KEY= "YEAR DATE KEY";
+    public static final String MONTH_DATE_KEY= "MONTH DATE KEY";
+
+    public static final String DAY_ENERGY_KEY= "DAY ENERGY KEY";
+    public static final String WEEK_ENERGY_KEY= "YEAR ENERGY KEY";
+    public static final String MONTH_ENERGY_KEY= "MONTH ENERGY KEY";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -90,6 +115,39 @@ public class FoodDetail extends AppCompatActivity {
                 finish();
             }
         });
+
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+
+        dayDate= calendar.get(Calendar.DAY_OF_MONTH);
+        weekDate=calendar.get(Calendar.DAY_OF_WEEK);
+        monthDate=calendar.get(Calendar.MONTH)+1;
+
+
+        if(mPreferences!=null){
+            preDayDate=mPreferences.getInt(DAY_DATE_KEY,-1);
+            preWeekDate=mPreferences.getInt(MONTH_DATE_KEY,-1);
+            preMonthDate=mPreferences.getInt(MONTH_DATE_KEY,-1);
+
+            DayEnergy=Double.valueOf(mPreferences.getString(DAY_ENERGY_KEY,"0.0"));
+            WeekEnergy=Double.valueOf(mPreferences.getString(WEEK_ENERGY_KEY,"0.0"));
+            MonthEnergy=Double.valueOf(mPreferences.getString(MONTH_ENERGY_KEY,"0.0"));
+        }else{
+            preDayDate=-1; preWeekDate=-1; preMonthDate=-1;
+            DayEnergy=0.0; WeekEnergy=0.0; MonthEnergy=0.0;
+        }
+
+        if(dayDate!=preDayDate){
+            DayEnergy=0.0;
+        }
+        if(weekDate==0 && weekDate!=preWeekDate){
+            WeekEnergy=0.0;
+        }else if(preWeekDate==-1){
+            WeekEnergy=0.0;
+        }
+        if(monthDate!=preMonthDate){
+            MonthEnergy=0.0;
+        }
+
         barChart = findViewById(R.id.BarChart);
 
         XAxis xAxis = barChart.getXAxis();
@@ -140,17 +198,16 @@ public class FoodDetail extends AppCompatActivity {
     }
 
     private void saveData(){
-        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        Gson gson = new Gson();
-        String json = sharedPreferences.getString("food data", null);
-        Type type = new TypeToken<ArrayList<String>>() {}.getType();
-        ArrayList<String> foodData = gson.fromJson(json, type);
-        foodData.add(String.valueOf(Calendar.getInstance().getTime()));
-        foodData.add(data[1]);
-        json = gson.toJson(foodData);
-        editor.putString("food data", json);
-        editor.apply();
+        Intent intent = getIntent();
+        List<String> data = intent.getStringArrayListExtra(HealthySoupActivity.KEY);
+        DayEnergy+=Double.valueOf(data.get(1));
+        WeekEnergy+=Double.valueOf(data.get(1));
+        MonthEnergy+=Double.valueOf(data.get(1));
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.putString(DAY_ENERGY_KEY,DayEnergy+"");
+        preferencesEditor.putString(WEEK_ENERGY_KEY,WeekEnergy+"");
+        preferencesEditor.putString(MONTH_ENERGY_KEY,MonthEnergy+"");
+        preferencesEditor.apply();
     }
     
     private String[] getData(){
@@ -174,6 +231,16 @@ public class FoodDetail extends AppCompatActivity {
         dataString[3] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[3])*300/Double.valueOf(dataAdvised[2]))));
         dataString[4] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[4])*100/Double.valueOf(dataAdvised[3]))));
         return dataString;
+    }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+        preferencesEditor.putInt(DAY_DATE_KEY,dayDate);
+        preferencesEditor.putInt(WEEK_DATE_KEY,weekDate);
+        preferencesEditor.putInt(MONTH_DATE_KEY,monthDate);
+        preferencesEditor.apply();
     }
 
     class User {

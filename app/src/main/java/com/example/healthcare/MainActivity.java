@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> parentLayout = new ArrayList<Integer>();
     ArrayList<String> data = null;
     EditText nameUser, studentID, userHeight, userWeight, userAge;
-    Button buttonOne, saveButton, cancelButton, femaleButton, maleButton;
+    Button buttonOne, buttonTwo, saveButton, cancelButton, femaleButton, maleButton;
 
     @Override
     public void onBackPressed() {
@@ -120,10 +120,23 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     if (data.get(2).equals("Height") || data.get(3).equals("Weight") || data.get(4).equals("Age")){
-                        Toast.makeText(MainActivity. this, "Please set up your information first",Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity. this, "Please set up your information first",Toast.LENGTH_SHORT).show();
                         return;
                     }
                     Intent intent = new Intent(MainActivity.this, CanteenActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+            buttonTwo = findViewById(R.id.buttonTwo);
+            buttonTwo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (data.get(2).equals("Height") || data.get(3).equals("Weight") || data.get(4).equals("Age")){
+                        Toast.makeText(MainActivity. this, "Please set up your information first",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    Intent intent = new Intent(MainActivity.this, EnergyActivity.class);
                     startActivity(intent);
                 }
             });
@@ -229,6 +242,12 @@ public class MainActivity extends AppCompatActivity {
 
         if (data == null || data.isEmpty()) {
             data = new ArrayList<String>();
+            data.add("Name");
+            data.add("Student ID");
+            data.add("Height");
+            data.add("Weight");
+            data.add("Age");
+            data.add("male");
         }
     }
 }

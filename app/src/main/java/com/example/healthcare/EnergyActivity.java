@@ -1,4 +1,4 @@
-/*package com.example.healthcare;
+package com.example.healthcare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -14,6 +14,12 @@ import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.util.ArrayList;
 
 public class EnergyActivity extends AppCompatActivity {
 
@@ -54,24 +60,29 @@ public class EnergyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.energy_activity);
 
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("data list", null);
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+        ArrayList<String> data = gson.fromJson(json, type);
+        for (String i: data){
+            System.out.println(i);
+        }
+
+        weight=data.get(2);
+        height=data.get(3);
+        age=data.get(4);
+        gender=data.get(5);
 
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
 
         if(mPreferences!=null){
-            weight=mPreferences.getString(ProfileActivity.WEIGHT_KEY,"60");
-            height=mPreferences.getString(ProfileActivity.HEIGHT_KEY,"172");
-            age=mPreferences.getString(ProfileActivity.AGE_KEY,"20");
-            gender=mPreferences.getString(ProfileActivity.GENDER_KEY,"male");
 
-            DayConsumeEnergy=Double.valueOf(mPreferences.getString(FoodDetailActivity.DAY_ENERGY_KEY,"0"));
-            WeekConsumeEnergy=Double.valueOf(mPreferences.getString(FoodDetailActivity.WEEK_ENERGY_KEY,"0"));
-            MonthConsumeEnergy=Double.valueOf(mPreferences.getString(FoodDetailActivity.MONTH_ENERGY_KEY,"0"));
+            DayConsumeEnergy=Double.valueOf(mPreferences.getString(FoodDetail.DAY_ENERGY_KEY,"0"));
+            WeekConsumeEnergy=Double.valueOf(mPreferences.getString(FoodDetail.WEEK_ENERGY_KEY,"0"));
+            MonthConsumeEnergy=Double.valueOf(mPreferences.getString(FoodDetail.MONTH_ENERGY_KEY,"0"));
 
         }else{
-            weight="60";
-            height="172";
-            age="20";
-            gender="male";
 
             DayConsumeEnergy=0.0;
             WeekConsumeEnergy=0.0;
@@ -109,4 +120,4 @@ public class EnergyActivity extends AppCompatActivity {
 
 
     }
-}*/
+}
