@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> parentLayout = new ArrayList<Integer>();
     ArrayList<String> data = null;
     EditText nameUser, studentID, userHeight, userWeight, userAge;
-    Button buttonOne, buttonTwo, saveButton, cancelButton, femaleButton, maleButton;
+    Button buttonOne, buttonTwo, saveButton, cancelButton, femaleButton, maleButton,buttonPlan;
 
     @Override
     public void onBackPressed() {
@@ -137,6 +137,20 @@ public class MainActivity extends AppCompatActivity {
                         return;
                     }
                     Intent intent = new Intent(MainActivity.this, EnergyActivity.class);
+                    startActivity(intent);
+                }
+            });
+
+
+            buttonPlan = findViewById(R.id.plan);
+            buttonPlan.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (data.get(2).equals("Height") || data.get(3).equals("Weight") || data.get(4).equals("Age")){
+                        Toast.makeText(MainActivity. this, "Please set up your information first",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    Intent intent = new Intent(MainActivity.this, Plan.class);
                     startActivity(intent);
                 }
             });
