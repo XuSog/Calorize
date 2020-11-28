@@ -1,6 +1,5 @@
 package com.example.healthcare;
 
-import android.content.Intent;
 import java.math.*;
 
 public class Get_desire_day_energy {

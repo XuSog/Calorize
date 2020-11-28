@@ -47,7 +47,6 @@ public class FoodDetail extends AppCompatActivity {
     ArrayList barEntries;
     Button cancelButton;
     Button saveButton;
-    TextView name;
     String[] data;
 
     Double DayEnergy;

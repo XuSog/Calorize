@@ -7,6 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".EnergyActivity">
 
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -63,7 +75,7 @@
         android:id="@+id/EnergyConsumeText"
 
         android:text="Consume Energy"
-        android:textSize="60sp"
+        android:textSize="40sp"
 
         android:gravity="center" />
 
