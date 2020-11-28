@@ -71,7 +71,7 @@
 
         <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/tufoButton"
+            android:id="@+id/tofuButton"
             android:contentDescription="@string/app_name"
 
             android:layout_width="match_parent"

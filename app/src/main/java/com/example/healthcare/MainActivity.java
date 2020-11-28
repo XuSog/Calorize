@@ -135,13 +135,12 @@ public class MainActivity extends AppCompatActivity {
 
         if ( layout == R.layout.profile) {
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            setSupportActionBar(toolbar);
             toolbar.setBackgroundColor(Color.BLACK);
             toolbar.setTitle("Setup Information");
             toolbar.setNavigationIcon(R.drawable.back);
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) { finish(); }
+                public void onClick(View v) { MainActivity.this.onBackPressed(); }
             });
             nameUser = findViewById(R.id.nameUser);
             studentID = findViewById(R.id.studentID);
@@ -172,7 +171,7 @@ public class MainActivity extends AppCompatActivity {
             cancelButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Toast.makeText(MainActivity. this, "Changes discarded",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity. this, "Changes discarded",Toast.LENGTH_SHORT).show();
                     MainActivity.this.onBackPressed();
                 }
             });
@@ -205,7 +204,7 @@ public class MainActivity extends AppCompatActivity {
                     if (! nameUser.getText().toString().isEmpty()) data.set(0, nameUser.getText().toString());
                     if (! studentID.getText().toString().isEmpty()) data.set(1, studentID.getText().toString());
                     saveData();
-                    Toast.makeText(MainActivity. this, "Information saved",Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity. this, "Information saved",Toast.LENGTH_SHORT).show();
                     MainActivity.this.onBackPressed();
                 }
             });
