@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".KoreanActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/plateSabaFishSetButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/plateChickenSetButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/plateBeefSetButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/plateSabaFishNChickenSetButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/beefRamenButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/kimichiRamenButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/kimichiSoupButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/dumplingRamenButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/fishFilletRamenButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/fryEbiNChickenKatsuBentoButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/friedRiceButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/chickenKatsuNScallopBentoButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/fishFilletNChickenKatsuBentoButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/sabaFishNChickenKatsuBentoButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/salmonFishNChickenKatsuBentoButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/salmonFishNPrawnBallBentoButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/fishFilletNFryEbiBentoButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/chickenKatsuSetButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/chickenKatsuNJapaneseCurryRiceButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/chickenKatsuNPrawnBallBentoButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

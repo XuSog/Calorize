@@ -2,6 +2,7 @@ package com.example.healthcare;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.TextView;
 import android.content.SharedPreferences;
 import android.widget.Toast;
@@ -30,8 +31,13 @@ public class Plan extends AppCompatActivity {
         rope_skip=findViewById(R.id.rope_skip);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
         toolbar.setBackgroundColor(Color.BLACK);
+        toolbar.setNavigationIcon(R.drawable.back);
+        toolbar.setTitle("Recommended Workout");
+        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) { finish(); }
+        });
 
         Double standard_energy=0.5*(HealthySoupActivity.Get_valueof_dayconsume()+HealthySoupActivity.Get_valueof_daydesire());
         double advised_value=advised_index*standard_energy;

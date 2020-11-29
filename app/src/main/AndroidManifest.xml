@@ -9,16 +9,37 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCare">
-        <activity android:name=".CanteenActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".EnergyActivity"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".HealthySoupActivity"
+        <activity android:name=".WesternActivity"
             android:parentActivityName=".CanteenActivity"></activity>
-        <activity android:name=".Plan"
-            android:parentActivityName=".MainActivity"></activity>
-        <activity android:name=".FoodDetail"
-            android:parentActivityName=".HealthySoupActivity" />
+        <activity android:name=".KoreanActivity"
+            android:parentActivityName=".CanteenActivity"/>
+        <activity
+            android:name=".IndianActivity"
+            android:parentActivityName=".CanteenActivity" />
+        <activity
+            android:name=".MuslimActivity"
+            android:parentActivityName=".CanteenActivity" />
+        <activity
+            android:name=".DrinkStoreActivity"
+            android:parentActivityName=".CanteenActivity" />
+        <activity
+            android:name=".ChickenRiceActivity"
+            android:parentActivityName=".CanteenActivity" />
+        <activity
+            android:name=".CanteenActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".EnergyActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".HealthySoupActivity"
+            android:parentActivityName=".CanteenActivity" />
+        <activity
+            android:name=".Plan"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".FoodDetail"
+            android:parentActivityName=".CanteenActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

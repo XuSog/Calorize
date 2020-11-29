@@ -91,10 +91,10 @@ public class CanteenActivity extends AppCompatActivity {
             }
         });
 
-        /*drinksButton.setOnClickListener(new View.OnClickListener() {
+        drinksButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CanteenActivity.this, DrinksAvtivity.class);
+                Intent intent = new Intent(CanteenActivity.this, DrinkStoreActivity.class);
                 startActivity(intent);
 
             }
@@ -103,7 +103,7 @@ public class CanteenActivity extends AppCompatActivity {
         muslimButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CanteenActivity.this, MuslimAvtivity.class);
+                Intent intent = new Intent(CanteenActivity.this, MuslimActivity.class);
                 startActivity(intent);
 
             }
@@ -111,7 +111,7 @@ public class CanteenActivity extends AppCompatActivity {
         indianButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CanteenActivity.this, IndianAvtivity.class);
+                Intent intent = new Intent(CanteenActivity.this, IndianActivity.class);
                 startActivity(intent);
 
             }
@@ -119,7 +119,7 @@ public class CanteenActivity extends AppCompatActivity {
         japKoreanButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CanteenActivity.this, JapKoreanAvtivity.class);
+                Intent intent = new Intent(CanteenActivity.this, KoreanActivity.class);
                 startActivity(intent);
 
             }
@@ -127,7 +127,7 @@ public class CanteenActivity extends AppCompatActivity {
         chickenRiceButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CanteenActivity.this, ChickenRiceAvtivity.class);
+                Intent intent = new Intent(CanteenActivity.this, ChickenRiceActivity.class);
                 startActivity(intent);
 
             }
@@ -135,11 +135,11 @@ public class CanteenActivity extends AppCompatActivity {
         westernButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(CanteenActivity.this, WesternAvtivity.class);
+                Intent intent = new Intent(CanteenActivity.this, WesternActivity.class);
                 startActivity(intent);
 
             }
-        });*/
+        });
 
 
 
