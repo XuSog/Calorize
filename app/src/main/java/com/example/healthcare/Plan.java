@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 import java.math.BigDecimal;
 import com.example.healthcare.EnergyActivity;
@@ -28,6 +29,9 @@ public class Plan extends AppCompatActivity {
         bicycle=findViewById(R.id.bicycle);
         rope_skip=findViewById(R.id.rope_skip);
 
+        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        toolbar.setBackgroundColor(Color.BLACK);
 
         Double standard_energy=0.5*(HealthySoupActivity.Get_valueof_dayconsume()+HealthySoupActivity.Get_valueof_daydesire());
         double advised_value=advised_index*standard_energy;
@@ -36,10 +40,6 @@ public class Plan extends AppCompatActivity {
         swim.setText("Swim: "+get_swim_time(advised_value)+" h");
         bicycle.setText("Bicycle: "+get_bicyle_time(advised_value)+" h");
         rope_skip.setText("Rope_skip: "+get_rope_skip_time(advised_value)+" h");
-
-
-
-
 
     }
     private double get_swim_time(double energy){
