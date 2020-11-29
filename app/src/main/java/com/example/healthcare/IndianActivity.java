@@ -218,6 +218,25 @@ public class IndianActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        
+        
+        chapatiButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(IndianActivity.this, FoodDetail.class);
+                KEY="food";
+                data.clear();
+                data.add("CHAPATI");  
+                data.add("143");
+                data.add("3");
+                data.add("5");
+                data.add("0");
+                intent.putExtra(KEY,data);
+                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                startActivity(intent);
+            }
+        });
+
 
         fishCurryButton.setOnClickListener(new View.OnClickListener() {
             @Override
