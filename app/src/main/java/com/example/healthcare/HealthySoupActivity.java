@@ -31,7 +31,7 @@ public class HealthySoupActivity extends AppCompatActivity {
     CustomImageButton chickenMeatButton;
     CustomImageButton chickenLiverButton;
 
-    public static String KEY="";
+    public static String KEY="food";
 
     ArrayList<String> data=new ArrayList<>();
 
@@ -102,7 +102,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="PORK SOUP KEY";
+                KEY="food";
                 data.clear();
                 data.add("PORK SOUP");
                 data.add("144.41");
@@ -120,7 +120,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="WHITE RICE KEY";
+                KEY="food";
                 data.clear();
                 data.add("WHITE RICE");
                 data.add("280");
@@ -138,7 +138,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="BROWN RICE KEY";
+                KEY="food";
                 data.clear();
                 data.add("BROWN RICE");
                 data.add("262");
@@ -155,7 +155,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="VEGETABLE KEY";
+                KEY="food";
                 data.clear();
                 data.add("VEGETABLE");
                 data.add("6.34");
@@ -173,7 +173,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="TOFU KEY";
+                KEY="food";
                 data.clear();
                 data.add("TOFU");
                 data.add("48.6");
@@ -190,7 +190,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="PIG EAR KEY";
+                KEY="food";
                 data.clear();
                 data.add("PIG EAR");
                 data.add("48");
@@ -207,7 +207,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="PIG TONGUE KEY";
+                KEY="food";
                 data.clear();
                 data.add("PIG TONGUE");
                 data.add("135");
@@ -224,7 +224,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="CHICKEN MEAT KEY";
+                KEY="food";
                 data.clear();
                 data.add("CHICKEN MEAT");
                 data.add("87.8");
@@ -242,7 +242,7 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="CHICKEN LIVER KEY";
+                KEY="food";
                 data.clear();
                 data.add("CHICKEN LIVER");
                 data.add("94.3");

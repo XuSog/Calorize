@@ -211,10 +211,7 @@ public class FoodDetail extends AppCompatActivity {
     
     private String[] getData(){
         Intent intent = getIntent();
-        List<String> dataGet = intent.getStringArrayListExtra(HealthySoupActivity.KEY);
-        for (String i : dataGet){
-            System.out.println(i);
-        }
+        List<String> dataGet = intent.getStringArrayListExtra("food");
         String[] foodDetail = dataGet.toArray(new String[0]);
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
         Gson gson = new Gson();
@@ -227,7 +224,7 @@ public class FoodDetail extends AppCompatActivity {
         dataString[0] = foodDetail[0];
         dataString[1] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[1])*200/Double.valueOf(dataAdvised[0]))));
         dataString[2] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[2])*200/Double.valueOf(dataAdvised[1]))));
-        dataString[3] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[3])*300/Double.valueOf(dataAdvised[2]))));
+        dataString[3] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[3])*3000/Double.valueOf(dataAdvised[2]))));
         dataString[4] = String.valueOf(Integer.valueOf((int) (Double.valueOf(foodDetail[4])*100/Double.valueOf(dataAdvised[3]))));
         return dataString;
     }

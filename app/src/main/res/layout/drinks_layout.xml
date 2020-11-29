@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DrinkStoreActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/miloButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/kopiButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/barleyButton"
+                android:contentDescription="@string/app_name"
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/tehButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/kayaToastButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/waffleButton"
+                android:contentDescription="@string/app_name"
+
+                android:layout_width="match_parent"
+
+                android:layout_height="150dp"
+
+                android:background="@drawable/sys1d" />
+
+
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

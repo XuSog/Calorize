@@ -104,7 +104,7 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-        android:text="当天运动量"
+        android:text="Recommended\nWorkout"
         android:textSize="40dp"
         android:layout_weight="1" />
 
