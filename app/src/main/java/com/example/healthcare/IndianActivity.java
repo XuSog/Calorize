@@ -30,6 +30,7 @@ public class IndianActivity extends AppCompatActivity {
     CustomImageButton chickenCurryButton;
     CustomImageButton fishCurryButton;
     CustomImageButton vegetableCurryButton;
+    CustomImageButton chapatiButton;
 
     public static String KEY="food";
 
@@ -58,12 +59,16 @@ public class IndianActivity extends AppCompatActivity {
         chickenCurryButton=findViewById(R.id.chickenCurryButton);
         fishCurryButton=findViewById(R.id.fishCurryButton);
         vegetableCurryButton=findViewById(R.id.vegetableCurryButton);
+        chapatiButton=findViewById(R.id.chapatiButton);
 
         plainPrataButton.setText("Plain Prata");
         plainPrataButton.setTextSize(80f);
         plainPrataButton.setColor(Color.BLACK);
 
-
+        chapatiButton.setText("Chapati");
+        chapatiButton.setTextSize(80f);
+        chapatiButton.setColor(Color.BLACK);
+        
         eggPrataButton.setText("Egg Prata");
         eggPrataButton.setTextSize(80f);
         eggPrataButton.setColor(Color.BLACK);
