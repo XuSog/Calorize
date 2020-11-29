@@ -15,8 +15,9 @@
             android:parentActivityName=".MainActivity"></activity>
         <activity android:name=".HealthySoupActivity"
             android:parentActivityName=".CanteenActivity"></activity>
-        <activity
-            android:name=".FoodDetail"
+        <activity android:name=".Plan"
+            android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".FoodDetail"
             android:parentActivityName=".HealthySoupActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>

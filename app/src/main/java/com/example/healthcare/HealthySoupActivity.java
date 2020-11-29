@@ -254,5 +254,12 @@ public class HealthySoupActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+    }
+    static double Get_valueof_daydesire(){
+        return EnergyActivity.get_valueof_daydesire();
+    }
+    static double Get_valueof_dayconsume(){
+        return EnergyActivity.get_valueof_dayconsume();
     }
 }

@@ -20,14 +20,14 @@ import java.util.ArrayList;
 
 public class EnergyActivity extends AppCompatActivity {
 
-    Double DayConsumeEnergy;
-    Double WeekConsumeEnergy;
-    Double MonthConsumeEnergy;
+    static Double DayConsumeEnergy=new Double(0);
+    static Double WeekConsumeEnergy=new Double(0);
+    static Double MonthConsumeEnergy=new Double(0);
     String InputEnergy;
 
-    Double DayDesireEnergy;
-    Double WeekDesireEnergy;
-    Double MonthDesireEnergy;
+    static Double DayDesireEnergy=new Double(0);
+    static Double WeekDesireEnergy=new Double(0);
+    static Double MonthDesireEnergy=new Double(0);
 
 
     String GoodComment="good job";
@@ -125,5 +125,11 @@ public class EnergyActivity extends AppCompatActivity {
         });
 
 
+    }
+    public static double get_valueof_daydesire(){
+        return DayDesireEnergy.doubleValue();
+    }
+    public static double get_valueof_dayconsume(){
+        return DayConsumeEnergy.doubleValue();
     }
 }
