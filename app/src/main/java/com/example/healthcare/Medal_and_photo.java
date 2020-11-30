@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -149,19 +150,29 @@ public class Medal_and_photo extends AppCompatActivity {
     }
     void unlock_medal(String str){
         ImageView i ;
+        TextView x;
 
         if (str=="one_day_medal"){
             i=findViewById(R.id.one_day_medal);
+            x=findViewById(R.id.B1);
+            x.setText("Keep healthy diet for 1 day (Finished already)");
             i.setImageResource(R.drawable.one_day);}
         if (str=="three_day_medal"){
             i=findViewById(R.id.three_day_medal);
-            i.setImageResource(R.drawable.three_day);}
+            i.setImageResource(R.drawable.three_day);
+            x=findViewById(R.id.B2);
+            x.setText("Keep healthy diet for 3 days (Finished already)");}
+
         if (str=="seven_day_medal"){
             i=findViewById(R.id.seven_day_medal);
-            i.setImageResource(R.drawable.one_month);}
+            i.setImageResource(R.drawable.one_month);
+            x=findViewById(R.id.B3);
+            x.setText("Keep healthy diet for 7 days (Finished already)");}
         if (str=="one_month_medal"){
             i=findViewById(R.id.one_month_medal);
-            i.setImageResource(R.drawable.one_day);
+            i.setImageResource(R.drawable.one_month);
+            x=findViewById(R.id.B4);
+            x.setText("Keep healthy diet for 1 month (Finished already)");
             }
 
 
