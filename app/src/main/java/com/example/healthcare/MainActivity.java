@@ -29,6 +29,7 @@ import com.google.gson.reflect.TypeToken;
 
 import java.lang.reflect.Type;
 import java.util.ArrayList;
+import java.util.Date;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -36,8 +37,9 @@ public class MainActivity extends AppCompatActivity {
     ArrayList<Integer> parentLayout = new ArrayList<Integer>();
     ArrayList<String> data = null;
     EditText nameUser, studentID, userHeight, userWeight, userAge;
-    Button buttonOne, buttonTwo, saveButton, cancelButton, femaleButton, maleButton,buttonPlan;
-
+    Button buttonOne, buttonTwo, saveButton, cancelButton, femaleButton, maleButton,buttonPlan,button_medal_and_photo;
+    static Date date;
+    int temp_0=0;
     @Override
     public void onBackPressed() {
         if (parentLayout.isEmpty()) {
@@ -58,6 +60,20 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setTitle("Calorize");
         changeLayout(R.layout.activity_main);
+        date=new java.util.Date();
+
+
+
+        profileButton=findViewById(R.id.profilePic);
+        Bundle bundle = getIntent().getExtras();
+        if (bundle != null){
+            temp_0 = bundle.getInt("pic");
+            profileButton.setImageResource(temp_0);
+        }
+
+
+
+
     }
 
     @Override
@@ -99,7 +115,10 @@ public class MainActivity extends AppCompatActivity {
 
     protected void changeLayout(int layout){
         setContentView(layout);
+
+
         if (layout == R.layout.activity_main) {
+            /**/
             profileButton = findViewById(R.id.profilePic);
             profileButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -157,6 +176,25 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, Plan.class);
                     startActivity(intent);
                 }
+
+            });
+
+            button_medal_and_photo = findViewById(R.id.button_Medal_and_Photo);
+            button_medal_and_photo.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (data.get(2).equals("Height") || data.get(3).equals("Weight") || data.get(4).equals("Age")){
+                        Toast.makeText(MainActivity. this, "Please set up your information first",Toast.LENGTH_SHORT).show();
+                        return;
+                    }
+                    /*if (HealthySoupActivity.Get_valueof_dayconsume()==0 ||HealthySoupActivity.Get_valueof_daydesire()==0 ){
+                        Toast.makeText(MainActivity. this, "Not available before 'About Me'",Toast.LENGTH_SHORT).show();
+                        return;
+                    }*/
+                    Intent intent = new Intent(MainActivity.this, Medal_and_photo.class);
+                    startActivity(intent);
+                }
+
             });
 
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -267,5 +305,8 @@ public class MainActivity extends AppCompatActivity {
             data.add("Age");
             data.add("male");
         }
+    }
+    static Date get_Date(){
+        return date;
     }
 }

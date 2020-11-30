@@ -38,6 +38,9 @@
             android:name=".Plan"
             android:parentActivityName=".MainActivity" />
         <activity
+            android:name=".Medal_and_photo"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".FoodDetail"
             android:parentActivityName=".CanteenActivity" />
         <activity android:name=".MainActivity">

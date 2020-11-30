@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Medal_and_photo">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="80px"
+            android:text="Healthy Diet Medal">
+            
+        </TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="40px"
+            android:text="You need to keep your daily calories intake neither too low nor too high">
+            
+        </TextView>
+        
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/one_day_medal"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/locked">
+                
+            </ImageView>
+            <ImageView
+                android:id="@+id/three_day_medal"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/locked">
+
+            </ImageView>
+           
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Keep healthy diet for 1 day (not finished)"
+                android:gravity="center"
+                ></TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Keep healthy diet for 3 day (not finished)"
+                android:gravity="center"
+                ></TextView>
+     
+
+
+    </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/seven_day_medal"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/locked">
+
+            </ImageView>
+            <ImageView
+                android:id="@+id/one_month_medal"
+                android:layout_width="0dp"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:background="@drawable/locked">
+
+            </ImageView>
+            
+
+
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Keep healthy diet for 7 day (not finished)"
+                    android:gravity="center"
+                    ></TextView>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Keep healthy diet for 30 day (not finished)"
+                    android:gravity="center"
+                    ></TextView>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="80px"
+                android:text="Profile Photo Collection">
+                
+            </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="40px"
+                android:text="Try to get medals to unlock more cute photo!">
+                
+            </TextView>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/p00"
+                        android:layout_width="0dp"
+                        android:layout_height="133dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/locked">
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/p01"
+                        android:layout_width="0dp"
+                        android:layout_height="133dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/locked">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/p10"
+                        android:layout_width="0dp"
+                        android:layout_height="133dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/locked">
+                    </ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/b1"
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="1"
+                        android:text="Set as photo"
+                        android:enabled="false">
+                    </Button>
+                    <Button
+                        android:id="@+id/b2"
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="1"
+                        android:text="Set as photo"
+                        android:enabled="false">
+                    </Button>
+                    <Button
+                        android:id="@+id/b3"
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="1"
+                        android:text="Set as photo"
+                        android:enabled="false">
+                    </Button>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    >
+                    <ImageView
+                        android:id="@+id/p11"
+                        android:layout_width="0dp"
+                        android:layout_height="133dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/locked">
+                    </ImageView>
+
+                    <ImageView
+                        android:id="@+id/p20"
+                        android:layout_width="0dp"
+                        android:layout_height="133dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/locked">
+                    </ImageView>
+                    <ImageView
+                        android:id="@+id/p21"
+                        android:layout_width="0dp"
+                        android:layout_height="133dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/locked">
+                    </ImageView>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <Button
+                        android:id="@+id/b4"
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="1"
+                        android:text="Set as photo"
+                        android:enabled="false">
+                    </Button>
+                    <Button
+                        android:id="@+id/b5"
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="1"
+                        android:text="Set as photo"
+                        android:enabled="false">
+                    </Button>
+                    <Button
+                        android:id="@+id/b6"
+                        android:layout_width="0dp"
+                        android:layout_height="75dp"
+                        android:layout_weight="1"
+                        android:text="Set as photo"
+                        android:enabled="false">
+                    </Button>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>        
+    </ScrollView>
+
+
+</LinearLayout>

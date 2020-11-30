@@ -39,7 +39,7 @@ public class Plan extends AppCompatActivity {
             public void onClick(View v) { finish(); }
         });
 
-        Double standard_energy=0.5*(HealthySoupActivity.Get_valueof_dayconsume()+HealthySoupActivity.Get_valueof_daydesire());
+        Double standard_energy=0.5*(EnergyActivity.get_valueof_dayconsume()+EnergyActivity.get_valueof_daydesire());
         double advised_value=advised_index*standard_energy;
         double max_value=max_index*standard_energy;
         run.setText("Run: "+get_run_time(advised_value)+" h");
