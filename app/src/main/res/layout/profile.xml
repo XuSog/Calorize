@@ -3,7 +3,7 @@
     android:orientation="vertical"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-
+    android:background="@drawable/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
@@ -31,7 +31,7 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-
+        android:textColor="@color/black"
         android:hint="Name"
         android:textSize="40dp" />
 
@@ -45,7 +45,7 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-
+        android:textColor="@color/black"
         android:hint="Student ID"
         android:textSize="40dp" />
 
@@ -59,7 +59,7 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-
+        android:textColor="@color/black"
         android:hint="Height (cm)"
         android:textSize="40dp" />
 
@@ -73,7 +73,7 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
-
+        android:textColor="@color/black"
         android:hint="Weight (kg)"
         android:textSize="40dp" />
 
@@ -121,6 +121,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         android:inputType= "numberDecimal"
+        android:textColor="@color/black"
         android:hint="Age"
         android:textSize="40dp" />
 

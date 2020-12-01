@@ -10,8 +10,6 @@
     android:paddingRight="16dp"
     tools:context=".MainActivity">
 
-
-
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">

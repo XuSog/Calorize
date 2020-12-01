@@ -227,12 +227,12 @@ public class MainActivity extends AppCompatActivity {
             if (!data.get(4).equals("Age")) userAge.setText(data.get(4));
 
             if (!data.get(5).equals(gender[0])) {
-                femaleButton.setTextColor(Color.RED);
-                maleButton.setTextColor(Color.BLACK);
+                femaleButton.setTextColor(Color.YELLOW);
+                maleButton.setTextColor(Color.WHITE);
             }
             else {
-                maleButton.setTextColor(Color.RED);
-                femaleButton.setTextColor(Color.BLACK);
+                maleButton.setTextColor(Color.YELLOW);
+                femaleButton.setTextColor(Color.WHITE);
             }
 
             cancelButton.setOnClickListener(new View.OnClickListener() {
@@ -246,8 +246,8 @@ public class MainActivity extends AppCompatActivity {
             femaleButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    femaleButton.setTextColor(Color.RED);
-                    maleButton.setTextColor(Color.BLACK);
+                    femaleButton.setTextColor(Color.YELLOW);
+                    maleButton.setTextColor(Color.WHITE);
                     gender[0] = "female";
                 }
             });
@@ -255,8 +255,8 @@ public class MainActivity extends AppCompatActivity {
             maleButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    maleButton.setTextColor(Color.RED);
-                    femaleButton.setTextColor(Color.BLACK);
+                    maleButton.setTextColor(Color.YELLOW);
+                    femaleButton.setTextColor(Color.WHITE);
                     gender[0] = "male";
                 }
             });

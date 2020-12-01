@@ -5,6 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".EnergyActivity">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -23,9 +24,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-
-        android:text="Energy"
-        android:textSize="60sp"
+        android:textColor="#DA9552"
+        android:text="Energy\nTracking"
+        android:textSize="48sp"
         android:gravity="center" />
 
     <RadioGroup
@@ -42,7 +43,7 @@
             android:id="@+id/dayButton"
             android:text="Day"
             android:textSize="30sp"
-
+            android:textColor="@color/black"
             android:checked="true"
 
             android:layout_width="0dp"
@@ -52,7 +53,7 @@
             android:id="@+id/weekButton"
             android:text="Week"
             android:textSize="30sp"
-
+            android:textColor="@color/black"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
@@ -60,7 +61,7 @@
             android:id="@+id/monthButton"
             android:text="Month"
             android:textSize="30sp"
-
+            android:textColor="@color/black"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
@@ -73,7 +74,7 @@
         android:layout_height="0dp"
         android:layout_weight="0.8"
         android:id="@+id/EnergyConsumeText"
-
+        android:textColor="#DA9552"
         android:text="Consume Energy"
         android:textSize="40sp"
 
@@ -84,7 +85,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-
+        android:textColor="#DA9552"
 
         android:text="Recommend"
         android:textSize="60sp"
@@ -99,7 +100,7 @@
         android:id="@+id/EnergyDesireText"
         android:text="Desire Energy"
         android:textSize="60sp"
-
+        android:textColor="#DA9552"
         android:gravity="center" />
 
     <LinearLayout

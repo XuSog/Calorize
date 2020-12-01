@@ -4,6 +4,7 @@
     android:orientation="vertical"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="@drawable/background"
     android:layout_height="match_parent"
     tools:context=".Medal_and_photo">
     <com.google.android.material.appbar.AppBarLayout
@@ -29,6 +30,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textSize="80px"
             android:text="Healthy Diet Medal">
             
@@ -36,6 +38,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:textColor="@color/black"
             android:textSize="40px"
             android:text="You need to keep your daily calories intake neither too low nor too high">
             
@@ -72,6 +75,7 @@
                 android:id="@+id/B1"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:text="Keep healthy diet for 1 day (not finished)"
                 android:gravity="center"
@@ -80,6 +84,7 @@
                 android:id="@+id/B2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:layout_weight="1"
                 android:text="Keep healthy diet for 3 day (not finished)"
                 android:gravity="center"
@@ -121,6 +126,7 @@
                     android:id="@+id/B3"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:text="Keep healthy diet for 7 day (not finished)"
                     android:gravity="center"
@@ -129,6 +135,7 @@
                     android:id="@+id/B4"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:textColor="@color/black"
                     android:layout_weight="1"
                     android:text="Keep healthy diet for 30 day (not finished)"
                     android:gravity="center"
@@ -142,6 +149,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textSize="80px"
                 android:text="Profile Photo Collection">
                 
@@ -149,6 +157,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:textSize="40px"
                 android:text="Try to get medals to unlock more cute photo!">
                 
@@ -156,6 +165,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:textColor="@color/black"
                 android:orientation="vertical"
                 >
                 <LinearLayout
@@ -167,6 +177,7 @@
                         android:layout_width="0dp"
                         android:layout_height="133dp"
                         android:layout_weight="1"
+                        android:textColor="@color/black"
                         android:background="@drawable/locked">
                     </ImageView>
 
@@ -175,6 +186,7 @@
                         android:layout_width="0dp"
                         android:layout_height="133dp"
                         android:layout_weight="1"
+                        android:textColor="@color/black"
                         android:background="@drawable/locked">
                     </ImageView>
                     <ImageView
@@ -182,6 +194,7 @@
                         android:layout_width="0dp"
                         android:layout_height="133dp"
                         android:layout_weight="1"
+                        android:textColor="@color/black"
                         android:background="@drawable/locked">
                     </ImageView>
                 </LinearLayout>
