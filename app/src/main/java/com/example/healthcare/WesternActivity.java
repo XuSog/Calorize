@@ -83,7 +83,7 @@ public class WesternActivity extends AppCompatActivity {
                 data.add("9.28");
                 data.add("20");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.aopic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -101,7 +101,7 @@ public class WesternActivity extends AppCompatActivity {
                 data.add("15.5");
                 data.add("117");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.choppic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -119,7 +119,7 @@ public class WesternActivity extends AppCompatActivity {
                 data.add("15.5");
                 data.add("117");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.frpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -136,7 +136,7 @@ public class WesternActivity extends AppCompatActivity {
                 data.add("2.9");
                 data.add("17");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.bologpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
