@@ -36,7 +36,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/platesabapic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -46,7 +46,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/platechickenpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -57,7 +57,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/platebeefpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -68,7 +68,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/snck" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -79,7 +79,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/beeframenpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -90,7 +90,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/kimchiramenpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -101,7 +101,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/kimchisouppic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -112,7 +112,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/dumplingramenpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -123,7 +123,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/fishfilletramenpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -134,7 +134,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/fenckpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -145,7 +145,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/friedricepic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -156,7 +156,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/cknscalpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -167,7 +167,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -178,7 +178,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/snfpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -189,7 +189,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/salnck" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -200,7 +200,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/salnpb" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -222,7 +222,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/ckpic" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -233,7 +233,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/japcurryricepic" />
             <com.example.healthcare.CustomImageButton
 
                 android:id="@+id/chickenKatsuNPrawnBallBentoButton"
@@ -243,7 +243,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/cknpbpic" />
 
         </LinearLayout>
     </ScrollView>
