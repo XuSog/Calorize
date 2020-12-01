@@ -64,6 +64,13 @@ public class EnergyActivity extends AppCompatActivity {
     TextView energyDesireText;
     TextView commentText;
 
+    String DayGoodComment = "well done, you have achieved today's target!";
+    String DayBadComment = "oh no you did not meet today's target, try harder!";
+    String WeekGoodComment = "well done, you have achieved this week's target!";
+    String WeekBadComment = "oh no you did not meet this week's target, try harder!";
+    String MonthGoodComment = "well done, you have achieved this month's target!";
+    String MonthBadComment = "oh no you did not meet this month's target, try harder!";
+
     public static final String sharedPrefFile = "com.example.android.mainsharedprefs";
     public static SharedPreferences mPreferences;
 
@@ -158,23 +165,46 @@ public class EnergyActivity extends AppCompatActivity {
         dayButton = (RadioButton) findViewById(R.id.dayButton);
         weekButton = (RadioButton) findViewById(R.id.weekButton);
         monthButton = (RadioButton) findViewById(R.id.monthButton);
+        commentText = findViewById(R.id.CommentText);
 
         energyConsumeText.setText(DayConsumeEnergy + "");
         energyDesireText.setText(DayDesireEnergy + "");
+        if(DayConsumeEnergy<=DayDesireEnergy){
+            commentText.setText( DayGoodComment );
+        }else{
+            commentText.setText( DayBadComment );
+        }
         dateRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (weekButton.getId() == checkedId) {
+
                     energyConsumeText.setText(WeekConsumeEnergy + "");
                     energyDesireText.setText(WeekDesireEnergy + "");
+                    if(WeekConsumeEnergy<=WeekDesireEnergy){
+                        commentText.setText( WeekGoodComment );
+                    }else{
+                        commentText.setText( WeekBadComment );
+                    }
+
                 } else if (monthButton.getId() == checkedId) {
                     energyConsumeText.setText(MonthConsumeEnergy + "");
                     energyDesireText.setText(MonthDesireEnergy + "");
+                    if(MonthConsumeEnergy<=MonthDesireEnergy){
+                        commentText.setText( MonthGoodComment );
+                    }else{
+                        commentText.setText( MonthBadComment );
+                    }
+
                 } else if (dayButton.getId() == checkedId) {
                     energyConsumeText.setText(DayConsumeEnergy + "");
                     energyDesireText.setText(DayDesireEnergy + "");
+                    if(DayConsumeEnergy<=DayDesireEnergy){
+                        commentText.setText( DayGoodComment );
+                    }else{
+                        commentText.setText( DayBadComment );
+                    }
                 }
-
             }
         });
 

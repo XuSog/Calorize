@@ -67,11 +67,6 @@ public class Plan extends AppCompatActivity {
         params.weight = 1.0f;
         params.gravity = Gravity.CENTER;
 
-        run.setLayoutParams(params);
-        run.setLayoutParams(params);
-        run.setLayoutParams(params);
-        run.setLayoutParams(params);
-
     }
     private double get_swim_time(double energy){
         return new BigDecimal(energy/447).setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();

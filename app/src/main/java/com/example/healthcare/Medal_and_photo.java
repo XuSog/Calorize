@@ -93,7 +93,6 @@ public class Medal_and_photo extends AppCompatActivity {
             }
         }
 
-
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -149,14 +148,6 @@ public class Medal_and_photo extends AppCompatActivity {
 
             }
         });
-
-
-
-
-
-
-
-
 
     }
     void unlock_medal(String str){
