@@ -111,7 +111,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("7");
                 data.add("190");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.pratapic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -128,7 +128,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("15");
                 data.add("194");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.eggpratapic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -145,7 +145,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("11");
                 data.add("11");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.samosapic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -162,7 +162,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("5");
                 data.add("1");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.ricepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -179,7 +179,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("15");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.idlipic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -196,7 +196,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("2");
                 data.add("1");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.dosapic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -214,7 +214,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("61");
                 data.add("164");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.chiccurrypic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -232,7 +232,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("5");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.chapatipic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -250,7 +250,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("17");
                 data.add("36");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.fishcurrypic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -267,7 +267,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("11");
                 data.add("26");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.dalpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
