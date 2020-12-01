@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".CanteenActivity"
+    android:background="@drawable/blackgroundplain"
     android:orientation="vertical">
 
     <com.google.android.material.appbar.AppBarLayout
@@ -15,97 +16,109 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary" />
+            android:background="#DA9552" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:orientation="vertical"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <TableLayout
+        android:layout_width="363dp"
+        android:layout_height="717dp"
+        android:layout_gravity="center">
 
-        <com.example.healthcare.CustomImageButton
-
-            android:id="@+id/drinksStoreButton"
-            android:contentDescription="@string/app_name"
-
-
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@drawable/dicon"
-            android:background="@drawable/sys1d" />
+            android:layout_height="match_parent">
 
-        <com.example.healthcare.CustomImageButton
+            <com.example.healthcare.CustomImageButton
 
-            android:id="@+id/muslimStoreButton"
-            android:contentDescription="@string/app_name"
+                android:id="@+id/drinksStoreButton"
+                android:layout_width="180dp"
 
+
+                android:layout_height="160dp"
+                android:background="@drawable/drinks"
+
+                android:contentDescription="@string/app_name" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/muslimStoreButton"
+                android:layout_width="180dp"
+
+                android:layout_height="160dp"
+
+                android:background="@drawable/malay"
+
+                android:contentDescription="@string/app_name" />
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            android:layout_height="150dp"
-            android:background="@drawable/micon"
-            android:background="@drawable/sys1d" />
+            <com.example.healthcare.CustomImageButton
 
-        <com.example.healthcare.CustomImageButton
+                android:id="@+id/indianStoreButton"
+                android:layout_width="180dp"
 
-            android:id="@+id/indianStoreButton"
-            android:contentDescription="@string/app_name"
+                android:layout_height="160dp"
 
+                android:background="@drawable/indian"
+
+                android:contentDescription="@string/app_name" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/japKoreanStoreButton"
+                android:layout_width="180dp"
+
+                android:layout_height="160dp"
+                android:background="@drawable/korean"
+
+                android:contentDescription="@string/app_name" />
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-            android:layout_height="150dp"
-            android:background="@drawable/iicon"
-            android:background="@drawable/sys1d" />
+            <com.example.healthcare.CustomImageButton
 
-        <com.example.healthcare.CustomImageButton
+                android:id="@+id/healthySoupStoreButton"
+                android:layout_width="180dp"
 
-            android:id="@+id/japKoreanStoreButton"
-            android:contentDescription="@string/app_name"
+                android:layout_height="160dp"
 
+                android:background="@drawable/soup"
+
+                android:contentDescription="@string/app_name" />
+
+            <com.example.healthcare.CustomImageButton
+
+                android:id="@+id/chickenRiceStoreButton"
+                android:layout_width="180dp"
+
+                android:layout_height="160dp"
+
+                android:background="@drawable/chicken"
+
+                android:contentDescription="@string/app_name" />
+        </TableRow>
+
+        <TableRow
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@drawable/kicon"
-            android:background="@drawable/sys1d" />
+            android:layout_height="match_parent">
 
+            <com.example.healthcare.CustomImageButton
 
-        <com.example.healthcare.CustomImageButton
+                android:id="@+id/westernStoreButton"
+                android:layout_width="180dp"
 
-            android:id="@+id/healthySoupStoreButton"
-            android:contentDescription="@string/app_name"
+                android:layout_height="160dp"
+                android:background="@drawable/western"
 
-            android:layout_width="match_parent"
-
-            android:layout_height="150dp"
-            android:background="@drawable/hsicon"
-            android:background="@drawable/sys1d" />
-
-        <com.example.healthcare.CustomImageButton
-
-            android:id="@+id/chickenRiceStoreButton"
-            android:contentDescription="@string/app_name"
-
-            android:layout_width="match_parent"
-
-            android:layout_height="150dp"
-            android:background="@drawable/cricon"
-            android:background="@drawable/sys1d" />
-
-        <com.example.healthcare.CustomImageButton
-
-            android:id="@+id/westernStoreButton"
-            android:contentDescription="@string/app_name"
-
-            android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:background="@drawable/wicon"
-            android:background="@drawable/sys1d" />
-
-
-
-    </LinearLayout>
-    </ScrollView>
+                android:contentDescription="@string/app_name" />
+        </TableRow>
+    </TableLayout>
 
 </LinearLayout>

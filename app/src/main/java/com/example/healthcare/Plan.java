@@ -2,7 +2,9 @@ package com.example.healthcare;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.View;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.content.SharedPreferences;
 import android.widget.Toast;
@@ -61,7 +63,14 @@ public class Plan extends AppCompatActivity {
         swim.setText("Swim: "+get_swim_time(advised_value)+" h");
         bicycle.setText("Bicycle: "+get_bicyle_time(advised_value)+" h");
         rope_skip.setText("Rope_skip: "+get_rope_skip_time(advised_value)+" h");
-        run.setGravity();
+        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT);
+        params.weight = 1.0f;
+        params.gravity = Gravity.CENTER;
+
+        run.setLayoutParams(params);
+        run.setLayoutParams(params);
+        run.setLayoutParams(params);
+        run.setLayoutParams(params);
 
     }
     private double get_swim_time(double energy){

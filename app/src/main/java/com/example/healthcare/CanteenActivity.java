@@ -53,31 +53,24 @@ public class CanteenActivity extends AppCompatActivity {
         chickenRiceButton=findViewById(R.id.chickenRiceStoreButton);
         westernButton=findViewById(R.id.westernStoreButton);
 
-        drinksButton.setText("Drinks");
         drinksButton.setColor(Color.BLACK);
         drinksButton.setTextSize(80f);
 
-        muslimButton.setText("Muslim");
         muslimButton.setColor(Color.BLACK);
         muslimButton.setTextSize(80f);
 
-        indianButton.setText("Indian");
         indianButton.setColor(Color.BLACK);
         indianButton.setTextSize(80f);
 
-        japKoreanButton.setText("Jap Korean");
         japKoreanButton.setColor(Color.BLACK);
         japKoreanButton.setTextSize(80f);
 
-        healthySoupButton.setText("Healthy Soup");
         healthySoupButton.setColor(Color.BLACK);
         healthySoupButton.setTextSize(80f);
 
-        chickenRiceButton.setText("Chicken Rice");
         chickenRiceButton.setColor(Color.BLACK);
         chickenRiceButton.setTextSize(80f);
 
-        westernButton.setText("Western Stall");
         westernButton.setColor(Color.BLACK);
         westernButton.setTextSize(80f);
 
