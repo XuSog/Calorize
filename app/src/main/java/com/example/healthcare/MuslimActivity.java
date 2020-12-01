@@ -81,7 +81,7 @@ public class MuslimActivity extends AppCompatActivity {
                 data.add("24");
                 data.add("117");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.nasilemakpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -99,7 +99,7 @@ public class MuslimActivity extends AppCompatActivity {
                 data.add("4");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.meerebuspic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -117,7 +117,7 @@ public class MuslimActivity extends AppCompatActivity {
                 data.add("5");
                 data.add("114");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.beefsataypic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -134,7 +134,7 @@ public class MuslimActivity extends AppCompatActivity {
                 data.add("0");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.ketupatpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
