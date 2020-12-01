@@ -66,13 +66,13 @@ public class FoodDetail extends AppCompatActivity {
     public static SharedPreferences mPreferences;
     public static final String sharedPrefFile = "com.example.android.mainsharedprefs";
 
-    public static final String DAY_DATE_KEY= "DAY DATE KEY";
-    public static final String WEEK_DATE_KEY= "YEAR DATE KEY";
-    public static final String MONTH_DATE_KEY= "MONTH DATE KEY";
+    public static final String DAY_DATE_KEY = "DAY DATE KEY";
+    public static final String WEEK_DATE_KEY = "WEEK DATE KEY";
+    public static final String MONTH_DATE_KEY = "MONTH DATE KEY";
 
-    public static final String DAY_ENERGY_KEY= "DAY ENERGY KEY";
-    public static final String WEEK_ENERGY_KEY= "YEAR ENERGY KEY";
-    public static final String MONTH_ENERGY_KEY= "MONTH ENERGY KEY";
+    public static final String DAY_CONSUME_ENERGY_KEY= "DAY CONSUME ENERGY KEY";
+    public static final String WEEK_CONSUME_ENERGY_KEY= "YEAR CONSUME ENERGY KEY";
+    public static final String MONTH_CONSUME_ENERGY_KEY= "MONTH CONSUME ENERGY KEY";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -123,28 +123,37 @@ public class FoodDetail extends AppCompatActivity {
 
 
         if(mPreferences!=null){
-            preDayDate=mPreferences.getInt(DAY_DATE_KEY,-1);
-            preWeekDate=mPreferences.getInt(MONTH_DATE_KEY,-1);
-            preMonthDate=mPreferences.getInt(MONTH_DATE_KEY,-1);
-
-            DayEnergy=Double.valueOf(mPreferences.getString(DAY_ENERGY_KEY,"0.0"));
-            WeekEnergy=Double.valueOf(mPreferences.getString(WEEK_ENERGY_KEY,"0.0"));
-            MonthEnergy=Double.valueOf(mPreferences.getString(MONTH_ENERGY_KEY,"0.0"));
+            DayEnergy=Double.valueOf(mPreferences.getString(DAY_CONSUME_ENERGY_KEY,"0.0"));
+            WeekEnergy=Double.valueOf(mPreferences.getString(WEEK_CONSUME_ENERGY_KEY,"0.0"));
+            MonthEnergy=Double.valueOf(mPreferences.getString(MONTH_CONSUME_ENERGY_KEY,"0.0"));
         }else{
-            preDayDate=-1; preWeekDate=-1; preMonthDate=-1;
             DayEnergy=0.0; WeekEnergy=0.0; MonthEnergy=0.0;
         }
 
-        if(dayDate!=preDayDate){
-            DayEnergy=0.0;
+        dayDate = calendar.get(Calendar.DAY_OF_MONTH);
+        weekDate = calendar.get(Calendar.DAY_OF_WEEK);
+        monthDate = calendar.get(Calendar.MONTH);
+
+        if (mPreferences != null) {
+            preDayDate = mPreferences.getInt(DAY_DATE_KEY, -1);
+            preWeekDate = mPreferences.getInt(WEEK_DATE_KEY, -1);
+            preMonthDate = mPreferences.getInt(MONTH_DATE_KEY, -1);
+        } else {
+            preDayDate = -1;
+            preWeekDate = -1;
+            preMonthDate = -1;
         }
-        if(weekDate==0 && weekDate!=preWeekDate){
-            WeekEnergy=0.0;
-        }else if(preWeekDate==-1){
-            WeekEnergy=0.0;
+
+        if (dayDate != preDayDate) {
+            DayEnergy = 0.0;
         }
-        if(monthDate!=preMonthDate){
-            MonthEnergy=0.0;
+        if (weekDate == 2 && weekDate != preWeekDate) {
+            WeekEnergy = 0.0;
+        } else if (preWeekDate == -1) {
+            MonthEnergy = 0.0;
+        }
+        if (monthDate != preMonthDate) {
+            MonthEnergy = 0.0;
         }
 
         barChart = findViewById(R.id.BarChart);
@@ -202,10 +211,11 @@ public class FoodDetail extends AppCompatActivity {
         DayEnergy+=Double.valueOf(data.get(1));
         WeekEnergy+=Double.valueOf(data.get(1));
         MonthEnergy+=Double.valueOf(data.get(1));
+
         SharedPreferences.Editor preferencesEditor = mPreferences.edit();
-        preferencesEditor.putString(DAY_ENERGY_KEY,DayEnergy+"");
-        preferencesEditor.putString(WEEK_ENERGY_KEY,WeekEnergy+"");
-        preferencesEditor.putString(MONTH_ENERGY_KEY,MonthEnergy+"");
+        preferencesEditor.putString(DAY_CONSUME_ENERGY_KEY,DayEnergy+"");
+        preferencesEditor.putString(WEEK_CONSUME_ENERGY_KEY,WeekEnergy+"");
+        preferencesEditor.putString(MONTH_CONSUME_ENERGY_KEY,MonthEnergy+"");
         preferencesEditor.apply();
     }
     

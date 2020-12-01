@@ -10,9 +10,13 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.lang.reflect.Type;
 import java.math.BigDecimal;
-import com.example.healthcare.EnergyActivity;
+import java.util.ArrayList;
 
+import com.example.healthcare.EnergyActivity;
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
 
 
 public class Plan extends AppCompatActivity {
@@ -39,13 +43,25 @@ public class Plan extends AppCompatActivity {
             public void onClick(View v) { finish(); }
         });
 
-        Double standard_energy=0.5*(EnergyActivity.get_valueof_dayconsume()+EnergyActivity.get_valueof_daydesire());
+        SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("data list", null);
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+        ArrayList<String> data = gson.fromJson(json, type);
+
+        Double weight=Double.valueOf(data.get(2));
+        Double height=Double.valueOf(data.get(3));
+        Integer age=Integer.valueOf(data.get(4));
+        String gender=String.valueOf(data.get(5));
+
+        Double standard_energy=new Get_desire_day_energy(height, weight, age, gender).get_energy();
         double advised_value=advised_index*standard_energy;
         double max_value=max_index*standard_energy;
         run.setText("Run: "+get_run_time(advised_value)+" h");
         swim.setText("Swim: "+get_swim_time(advised_value)+" h");
         bicycle.setText("Bicycle: "+get_bicyle_time(advised_value)+" h");
         rope_skip.setText("Rope_skip: "+get_rope_skip_time(advised_value)+" h");
+        run.setGravity();
 
     }
     private double get_swim_time(double energy){

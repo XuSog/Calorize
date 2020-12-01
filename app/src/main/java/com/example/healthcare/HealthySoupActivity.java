@@ -31,9 +31,9 @@ public class HealthySoupActivity extends AppCompatActivity {
     CustomImageButton chickenMeatButton;
     CustomImageButton chickenLiverButton;
 
-    public static String KEY="food";
+    public static String KEY = "food";
 
-    ArrayList<String> data=new ArrayList<>();
+    ArrayList<String> data = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,18 +46,20 @@ public class HealthySoupActivity extends AppCompatActivity {
         toolbar.setTitle("Healthy Soup");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) { finish(); }
+            public void onClick(View v) {
+                finish();
+            }
         });
 
-        porkSoupButton=findViewById(R.id.porkSoupButton);
-        whiteRiceButton=findViewById(R.id.whiteRiceButton);
-        brownRiceButton=findViewById(R.id.brownRiceButton);
-        vegetableButton=findViewById(R.id.vegetableButton);
-        tofuButton=findViewById(R.id.tofuButton);
-        pigEarButton=findViewById(R.id.pigEarButton);
-        pigTongueButton=findViewById(R.id.pigTongueButton);
-        chickenMeatButton=findViewById(R.id.chickenMeatButton);
-        chickenLiverButton=findViewById(R.id.chickenLiverButton);
+        porkSoupButton = findViewById(R.id.porkSoupButton);
+        whiteRiceButton = findViewById(R.id.whiteRiceButton);
+        brownRiceButton = findViewById(R.id.brownRiceButton);
+        vegetableButton = findViewById(R.id.vegetableButton);
+        tofuButton = findViewById(R.id.tofuButton);
+        pigEarButton = findViewById(R.id.pigEarButton);
+        pigTongueButton = findViewById(R.id.pigTongueButton);
+        chickenMeatButton = findViewById(R.id.chickenMeatButton);
+        chickenLiverButton = findViewById(R.id.chickenLiverButton);
 
         porkSoupButton.setText("Pork Soup");
         porkSoupButton.setTextSize(80f);
@@ -97,19 +99,18 @@ public class HealthySoupActivity extends AppCompatActivity {
         chickenLiverButton.setTextSize(80f);
 
 
-
         porkSoupButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("PORK SOUP");
                 data.add("144.41");
                 data.add("18");
                 data.add("6");
                 data.add("41.36");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
@@ -120,14 +121,14 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("WHITE RICE");
                 data.add("280");
                 data.add("5.6");
                 data.add("1");
                 data.add("0");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
@@ -138,14 +139,14 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("BROWN RICE");
                 data.add("262");
                 data.add("2.7");
                 data.add("2.52");
                 data.add("0");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
@@ -155,14 +156,14 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("VEGETABLE");
                 data.add("6.34");
                 data.add("0.40");
                 data.add("0");
                 data.add("0");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
@@ -173,14 +174,14 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("TOFU");
                 data.add("48.6");
                 data.add("4.86");
                 data.add("2.21");
                 data.add("0");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
@@ -190,14 +191,14 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("PIG EAR");
                 data.add("48");
                 data.add("6.77");
                 data.add("1.2");
                 data.add("0");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
@@ -207,14 +208,14 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("PIG TONGUE");
                 data.add("135");
                 data.add("9.6");
                 data.add("10.2");
                 data.add("60.6");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
@@ -224,14 +225,14 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("CHICKEN MEAT");
                 data.add("87.8");
                 data.add("7.59");
                 data.add("6.16");
                 data.add("30.6");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
@@ -242,24 +243,18 @@ public class HealthySoupActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(HealthySoupActivity.this, FoodDetail.class);
-                KEY="food";
+                KEY = "food";
                 data.clear();
                 data.add("CHICKEN LIVER");
                 data.add("94.3");
                 data.add("14.6");
                 data.add("3.27");
                 data.add("378.8");
-                intent.putExtra(KEY,data);
+                intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
 
-    }
-    static double Get_valueof_daydesire(){
-        return EnergyActivity.get_valueof_daydesire();
-    }
-    static double Get_valueof_dayconsume(){
-        return EnergyActivity.get_valueof_dayconsume();
     }
 }
