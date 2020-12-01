@@ -35,8 +35,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                                                       
-                android:background="@drawable/milopic"
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/milopic"/>
 
             <com.example.healthcare.CustomImageButton
 
@@ -46,8 +45,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 
-                android:background="@drawable/kopipic"                                      
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/kopipic"/>                                      
+                
 
             <com.example.healthcare.CustomImageButton
 
@@ -57,8 +56,8 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/barleypic"                                      
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/barleypic"/>                                      
+               
 
             <com.example.healthcare.CustomImageButton
 
@@ -69,8 +68,8 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/tehpic"                                      
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/tehpic"/>                                      
+                
 
             <com.example.healthcare.CustomImageButton
 
@@ -81,8 +80,8 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/toastpic"                                      
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/toastpic"/>                                      
+               
 
             <com.example.healthcare.CustomImageButton
 
@@ -93,8 +92,8 @@
 
                 android:layout_height="150dp"
                 
-                android:background="@drawable/wafflepic"                                      
-                android:background="@drawable/sys1d" />
+                android:background="@drawable/wafflepic"/>                                      
+              
 
 
 
