@@ -83,7 +83,7 @@ public class ChickenRiceActivity extends AppCompatActivity {
                 data.add("13.8");
                 data.add("36.6");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.steamedcr);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -101,7 +101,7 @@ public class ChickenRiceActivity extends AppCompatActivity {
                 data.add("14.7");
                 data.add("26.4");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.braisedcr);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -119,7 +119,7 @@ public class ChickenRiceActivity extends AppCompatActivity {
                 data.add("11.9");
                 data.add("55.5");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.charsiewr);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -136,7 +136,7 @@ public class ChickenRiceActivity extends AppCompatActivity {
                 data.add("1.85");
                 data.add("76.0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.wanton);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
