@@ -34,7 +34,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                                                      
+
                 android:background="@drawable/milopic" />
 
             <com.example.healthcare.CustomImageButton
@@ -44,7 +44,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-                
+
                 android:background="@drawable/kopipic" />
 
             <com.example.healthcare.CustomImageButton
@@ -87,10 +87,8 @@
                 android:layout_width="match_parent"
 
                 android:layout_height="150dp"
-                
+
                 android:background="@drawable/wafflepic" />
-
-
 
 
         </LinearLayout>
