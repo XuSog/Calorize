@@ -187,7 +187,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("13.6");
                 data.add("26");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.platesabapic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -204,7 +204,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("14");
                 data.add("61");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.platechickenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -221,7 +221,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("14");
                 data.add("53");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.platebeefpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -238,7 +238,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("13");
                 data.add("44");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.snck);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -255,7 +255,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("26");
                 data.add("260");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.beeframenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -272,7 +272,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("23");
                 data.add("207");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.kimchiramenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -289,7 +289,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("23");
                 data.add("216");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.dumplingramenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -306,7 +306,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("28");
                 data.add("113");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.fishfilletramenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -323,7 +323,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("18");
                 data.add("16");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.fenckpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -341,7 +341,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("10");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.cknscalpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -358,7 +358,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("17");
                 data.add("7");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.ffnck);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -376,7 +376,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("12");
                 data.add("13");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.snfpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -393,7 +393,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("9");
                 data.add("26");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.salnpb);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -410,7 +410,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("24");
                 data.add("25");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.ffnfepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -427,7 +427,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("17");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.ckpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -444,7 +444,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("14");
                 data.add("34");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.japcurryricepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -461,7 +461,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("12");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.cknpbpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -478,7 +478,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("12");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.kimchisouppic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -495,7 +495,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("12");
                 data.add("13");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.salnck);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -512,7 +512,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("31");
                 data.add("345");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.friedricepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
