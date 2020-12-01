@@ -34,7 +34,8 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-
+                                                      
+                android:background="@drawable/milopic"
                 android:background="@drawable/sys1d" />
 
             <com.example.healthcare.CustomImageButton
@@ -44,7 +45,8 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
-
+                
+                android:background="@drawable/kopipic"                                      
                 android:background="@drawable/sys1d" />
 
             <com.example.healthcare.CustomImageButton
@@ -55,6 +57,7 @@
 
                 android:layout_height="150dp"
 
+                android:background="@drawable/barleypic"                                      
                 android:background="@drawable/sys1d" />
 
             <com.example.healthcare.CustomImageButton
@@ -66,6 +69,7 @@
 
                 android:layout_height="150dp"
 
+                android:background="@drawable/tehpic"                                      
                 android:background="@drawable/sys1d" />
 
             <com.example.healthcare.CustomImageButton
@@ -77,6 +81,7 @@
 
                 android:layout_height="150dp"
 
+                android:background="@drawable/toastpic"                                      
                 android:background="@drawable/sys1d" />
 
             <com.example.healthcare.CustomImageButton
@@ -87,7 +92,8 @@
                 android:layout_width="match_parent"
 
                 android:layout_height="150dp"
-
+                
+                android:background="@drawable/wafflepic"                                      
                 android:background="@drawable/sys1d" />
 
 
