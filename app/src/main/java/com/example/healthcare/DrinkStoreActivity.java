@@ -137,9 +137,9 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 KEY="food";
                 data.clear();
                 data.add("TEH");
-                data.add("0");
-                data.add("0");
-                data.add("0");
+                data.add("153");
+                data.add("2");
+                data.add("2");
                 data.add("0");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.tehpic);  // R.drawable.sys1d to be replaced!
