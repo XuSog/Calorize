@@ -12,11 +12,6 @@ import android.view.View;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.google.gson.Gson;
-import com.google.gson.reflect.TypeToken;
-
-import java.io.ByteArrayOutputStream;
-import java.lang.reflect.Type;
 import java.util.ArrayList;
 
 public class IndianActivity extends AppCompatActivity {
@@ -43,7 +38,7 @@ public class IndianActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
-        toolbar.setBackgroundColor(Color.BLACK);
+        toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
         toolbar.setTitle("Indian");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

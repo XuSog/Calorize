@@ -20,11 +20,12 @@ import com.example.healthcare.EnergyActivity;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
-
 public class Plan extends AppCompatActivity {
     TextView run,swim,bicycle,rope_skip;
     double advised_index=0.3;
     double max_index=0.4;
+    public static final String sharedPrefFile = "com.example.android.mainsharedprefs";
+    public static SharedPreferences mPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,7 +38,7 @@ public class Plan extends AppCompatActivity {
         rope_skip=findViewById(R.id.rope_skip);
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setBackgroundColor(Color.BLACK);
+        toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setTitle("Recommended Workout");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
@@ -56,17 +57,16 @@ public class Plan extends AppCompatActivity {
         Integer age=Integer.valueOf(data.get(4));
         String gender=String.valueOf(data.get(5));
 
-        Double standard_energy=new Get_desire_day_energy(height, weight, age, gender).get_energy();
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        Double DayConsumeEnergy = Double.valueOf(mPreferences.getString(FoodDetail.DAY_CONSUME_ENERGY_KEY, "0"));
+
+        Double standard_energy=(new Get_desire_day_energy(height, weight, age, gender).get_energy() + DayConsumeEnergy)/2;
         double advised_value=advised_index*standard_energy;
         double max_value=max_index*standard_energy;
         run.setText("Run: "+get_run_time(advised_value)+" h");
         swim.setText("Swim: "+get_swim_time(advised_value)+" h");
         bicycle.setText("Bicycle: "+get_bicyle_time(advised_value)+" h");
         rope_skip.setText("Rope_skip: "+get_rope_skip_time(advised_value)+" h");
-        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.MATCH_PARENT);
-        params.weight = 1.0f;
-        params.gravity = Gravity.CENTER;
-
     }
     private double get_swim_time(double energy){
         return new BigDecimal(energy/447).setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();

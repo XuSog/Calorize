@@ -92,7 +92,7 @@ public class FoodDetail extends AppCompatActivity {
         }
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
-        toolbar.setBackgroundColor(Color.BLACK);
+        toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
         toolbar.setTitle(data[0]);
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

@@ -10,39 +10,51 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.HealthCare">
         <activity android:name=".WesternActivity"
-            android:parentActivityName=".CanteenActivity"></activity>
+            android:parentActivityName=".CanteenActivity"
+            android:screenOrientation="portrait"></activity>
         <activity android:name=".KoreanActivity"
-            android:parentActivityName=".CanteenActivity"/>
+            android:parentActivityName=".CanteenActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".IndianActivity"
-            android:parentActivityName=".CanteenActivity" />
+            android:parentActivityName=".CanteenActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".MuslimActivity"
-            android:parentActivityName=".CanteenActivity" />
+            android:parentActivityName=".CanteenActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".DrinkStoreActivity"
-            android:parentActivityName=".CanteenActivity" />
+            android:parentActivityName=".CanteenActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".ChickenRiceActivity"
-            android:parentActivityName=".CanteenActivity" />
+            android:parentActivityName=".CanteenActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".CanteenActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".EnergyActivity"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".HealthySoupActivity"
-            android:parentActivityName=".CanteenActivity" />
+            android:parentActivityName=".CanteenActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Plan"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".Medal_and_photo"
-            android:parentActivityName=".MainActivity" />
+            android:parentActivityName=".MainActivity"
+            android:screenOrientation="portrait"/>
         <activity
             android:name=".FoodDetail"
-            android:parentActivityName=".CanteenActivity" />
+            android:parentActivityName=".CanteenActivity"
+            android:screenOrientation="portrait"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

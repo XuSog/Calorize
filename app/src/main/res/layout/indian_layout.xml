@@ -89,7 +89,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/dosaipic" />
+                android:background="@drawable/dosapic" />
             
             <com.example.healthcare.CustomImageButton
 
@@ -134,12 +134,6 @@
                 android:layout_height="150dp"
 
                 android:background="@drawable/dalpic" />
-
-
-
-
-
-
 
         </LinearLayout>
     </ScrollView>

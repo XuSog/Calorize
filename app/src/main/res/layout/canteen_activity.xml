@@ -60,21 +60,16 @@
 
                 android:id="@+id/indianStoreButton"
                 android:layout_width="180dp"
-
                 android:layout_height="160dp"
-
                 android:background="@drawable/indian"
-
                 android:contentDescription="@string/app_name" />
 
             <com.example.healthcare.CustomImageButton
 
                 android:id="@+id/japKoreanStoreButton"
                 android:layout_width="180dp"
-
                 android:layout_height="160dp"
                 android:background="@drawable/korean"
-
                 android:contentDescription="@string/app_name" />
         </TableRow>
 
@@ -86,22 +81,16 @@
 
                 android:id="@+id/healthySoupStoreButton"
                 android:layout_width="180dp"
-
                 android:layout_height="160dp"
-
                 android:background="@drawable/soup"
-
                 android:contentDescription="@string/app_name" />
 
             <com.example.healthcare.CustomImageButton
 
                 android:id="@+id/chickenRiceStoreButton"
                 android:layout_width="180dp"
-
                 android:layout_height="160dp"
-
                 android:background="@drawable/chicken"
-
                 android:contentDescription="@string/app_name" />
         </TableRow>
 
@@ -110,13 +99,10 @@
             android:layout_height="match_parent">
 
             <com.example.healthcare.CustomImageButton
-
                 android:id="@+id/westernStoreButton"
                 android:layout_width="180dp"
-
                 android:layout_height="160dp"
                 android:background="@drawable/western"
-
                 android:contentDescription="@string/app_name" />
         </TableRow>
     </TableLayout>

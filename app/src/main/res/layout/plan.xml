@@ -103,13 +103,5 @@
                 android:textColor="@color/black"
                 android:id="@+id/bicycle"/>
         </LinearLayout>
-
     </LinearLayout>
-
-
-
-
-
-
-
 </LinearLayout>

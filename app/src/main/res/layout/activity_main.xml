@@ -65,6 +65,7 @@
                 android:layout_gravity="center"
                android:layout_weight="1"
                 android:text="Name"
+                android:textColor="@color/black"
                 android:textSize="30dp" />
 
             <TextView
@@ -75,6 +76,7 @@
                 android:layout_weight="1"
                 android:text="Student ID"
                 android:textAllCaps="false"
+                android:textColor="@color/black"
                 android:textSize="30dp" />
 
         </LinearLayout>
@@ -101,7 +103,7 @@
             android:paddingRight="16dp"
             android:paddingBottom="16dp"
 
-            android:text="Select dishes"
+            android:text="Select Stall"
             android:textAllCaps="false"
             android:textSize="40dp"
             app:backgroundTint="#DA9552" />

@@ -27,7 +27,6 @@ import java.util.Calendar;
 
 public class EnergyActivity extends AppCompatActivity {
 
-
     Double DayConsumeEnergy;
     Double WeekConsumeEnergy;
     Double MonthConsumeEnergy;
@@ -36,7 +35,6 @@ public class EnergyActivity extends AppCompatActivity {
     Double DayDesireEnergy;
     Double WeekDesireEnergy;
     Double MonthDesireEnergy;
-
 
     Integer dayDate;
     Integer weekDate;
@@ -47,14 +45,10 @@ public class EnergyActivity extends AppCompatActivity {
     Integer preMonthDate;
     Calendar calendar = Calendar.getInstance();
 
-    String GoodComment = "good job";
-    String BadComment = "need to eat less";
-
     String height;
     String weight;
     String age;
     String gender;
-
 
     RadioGroup dateRadioGroup;
     RadioButton dayButton;
@@ -62,18 +56,13 @@ public class EnergyActivity extends AppCompatActivity {
     RadioButton monthButton;
     TextView energyConsumeText;
     TextView energyDesireText;
-    TextView commentText;
 
-    String DayGoodComment = "well done, you have achieved today's target!";
-    String DayBadComment = "oh no you did not meet today's target, try harder!";
-    String WeekGoodComment = "well done, you have achieved this week's target!";
-    String WeekBadComment = "oh no you did not meet this week's target, try harder!";
-    String MonthGoodComment = "well done, you have achieved this month's target!";
-    String MonthBadComment = "oh no you did not meet this month's target, try harder!";
+    ImageView imageView1;
+    ImageView imageView2;
+    ImageView imageView3;
 
     public static final String sharedPrefFile = "com.example.android.mainsharedprefs";
     public static SharedPreferences mPreferences;
-
 
     public static final String DAY_DATE_KEY_2 = "DAY DATE KEY_2";
     public static final String WEEK_DATE_KEY_2 = "WEEK DATE KEY_2";
@@ -88,7 +77,7 @@ public class EnergyActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
-        toolbar.setBackgroundColor(Color.BLACK);
+        toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
         toolbar.setTitle("About Me");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,11 +96,9 @@ public class EnergyActivity extends AppCompatActivity {
         gender=data.get(5);
 
         if (mPreferences != null) {
-
             DayConsumeEnergy = Double.valueOf(mPreferences.getString(FoodDetail.DAY_CONSUME_ENERGY_KEY, "0"));
             WeekConsumeEnergy = Double.valueOf(mPreferences.getString(FoodDetail.WEEK_CONSUME_ENERGY_KEY, "0"));
             MonthConsumeEnergy = Double.valueOf(mPreferences.getString(FoodDetail.MONTH_CONSUME_ENERGY_KEY, "0"));
-
         } else {
             weight = "60";
             height = "172";
@@ -154,8 +141,8 @@ public class EnergyActivity extends AppCompatActivity {
 
 
         DayDesireEnergy = new Get_desire_day_energy(Double.valueOf(height), Double.valueOf(weight), Integer.valueOf(age), gender).get_energy();
-        WeekDesireEnergy = DayDesireEnergy * 7;//当前年份数目
-        MonthDesireEnergy = DayDesireEnergy * 30;//当前月份数目
+        WeekDesireEnergy = DayDesireEnergy * 7;
+        MonthDesireEnergy = DayDesireEnergy * 30;
 
         Log.e("TAG3", DayConsumeEnergy + "");
         energyConsumeText = findViewById(R.id.EnergyConsumeText);
@@ -165,14 +152,23 @@ public class EnergyActivity extends AppCompatActivity {
         dayButton = (RadioButton) findViewById(R.id.dayButton);
         weekButton = (RadioButton) findViewById(R.id.weekButton);
         monthButton = (RadioButton) findViewById(R.id.monthButton);
-        commentText = findViewById(R.id.CommentText);
 
         energyConsumeText.setText(DayConsumeEnergy + "");
         energyDesireText.setText(DayDesireEnergy + "");
+
+        imageView1=findViewById(R.id.imageView1);
+        imageView2=findViewById(R.id.imageView2);
+        imageView3=findViewById(R.id.imageView3);
+        energyConsumeText.setText(DayConsumeEnergy + "");
+        energyDesireText.setText(DayDesireEnergy + "");
         if(DayConsumeEnergy<=DayDesireEnergy){
-            commentText.setText( DayGoodComment );
+            imageView1.setImageResource(R.drawable.thumbup);
+            imageView2.setImageResource(R.drawable.thumbup);
+            imageView3.setImageResource(R.drawable.thumbup);
         }else{
-            commentText.setText( DayBadComment );
+            imageView1.setImageResource(R.drawable.thumpdown);
+            imageView2.setImageResource(R.drawable.thumpdown);
+            imageView3.setImageResource(R.drawable.thumpdown);
         }
         dateRadioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -182,31 +178,45 @@ public class EnergyActivity extends AppCompatActivity {
                     energyConsumeText.setText(WeekConsumeEnergy + "");
                     energyDesireText.setText(WeekDesireEnergy + "");
                     if(WeekConsumeEnergy<=WeekDesireEnergy){
-                        commentText.setText( WeekGoodComment );
+                        imageView1.setImageResource(R.drawable.thumbup);
+                        imageView2.setImageResource(R.drawable.thumbup);
+                        imageView3.setImageResource(R.drawable.thumbup);
                     }else{
-                        commentText.setText( WeekBadComment );
+                        imageView1.setImageResource(R.drawable.thumpdown);
+                        imageView2.setImageResource(R.drawable.thumpdown);
+                        imageView3.setImageResource(R.drawable.thumpdown);
                     }
 
                 } else if (monthButton.getId() == checkedId) {
                     energyConsumeText.setText(MonthConsumeEnergy + "");
                     energyDesireText.setText(MonthDesireEnergy + "");
                     if(MonthConsumeEnergy<=MonthDesireEnergy){
-                        commentText.setText( MonthGoodComment );
+                        imageView1.setImageResource(R.drawable.thumbup);
+                        imageView2.setImageResource(R.drawable.thumbup);
+                        imageView3.setImageResource(R.drawable.thumbup);
                     }else{
-                        commentText.setText( MonthBadComment );
+                        imageView1.setImageResource(R.drawable.thumpdown);
+                        imageView2.setImageResource(R.drawable.thumpdown);
+                        imageView3.setImageResource(R.drawable.thumpdown);
                     }
 
                 } else if (dayButton.getId() == checkedId) {
                     energyConsumeText.setText(DayConsumeEnergy + "");
                     energyDesireText.setText(DayDesireEnergy + "");
                     if(DayConsumeEnergy<=DayDesireEnergy){
-                        commentText.setText( DayGoodComment );
+                        imageView1.setImageResource(R.drawable.thumbup);
+                        imageView2.setImageResource(R.drawable.thumbup);
+                        imageView3.setImageResource(R.drawable.thumbup);
                     }else{
-                        commentText.setText( DayBadComment );
+                        imageView1.setImageResource(R.drawable.thumpdown);
+                        imageView2.setImageResource(R.drawable.thumpdown);
+                        imageView3.setImageResource(R.drawable.thumpdown);
                     }
                 }
             }
         });
+
+
 
     }
     protected void onPause() {

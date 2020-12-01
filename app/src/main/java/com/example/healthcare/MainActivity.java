@@ -40,6 +40,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonOne, buttonTwo, saveButton, cancelButton, femaleButton, maleButton,buttonPlan,button_medal_and_photo;
     static Date date;
     int temp_0=0;
+
     @Override
     public void onBackPressed() {
         if (parentLayout.isEmpty()) {
@@ -95,6 +96,17 @@ public class MainActivity extends AppCompatActivity {
             view.setText(data.get(0));
             view = findViewById(R.id.studentIDBox);
             view.setText(data.get(1));
+            SharedPreferences mPreferences;
+            String sharedPrefFile = "com.example.android.mainsharedprefs";
+            mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+            SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+            String DAY_CONSUME_ENERGY_KEY= "DAY CONSUME ENERGY KEY";
+            String WEEK_CONSUME_ENERGY_KEY= "YEAR CONSUME ENERGY KEY";
+            String MONTH_CONSUME_ENERGY_KEY= "MONTH CONSUME ENERGY KEY";
+            preferencesEditor.putString(DAY_CONSUME_ENERGY_KEY,"0");
+            preferencesEditor.putString(WEEK_CONSUME_ENERGY_KEY,"0");
+            preferencesEditor.putString(MONTH_CONSUME_ENERGY_KEY,"0");
+            preferencesEditor.apply();
         }
 
         return super.onOptionsItemSelected(item);
@@ -185,12 +197,12 @@ public class MainActivity extends AppCompatActivity {
 
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
             setSupportActionBar(toolbar);
-            toolbar.setBackgroundColor(Color.BLACK);
+            toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
         }
 
         if ( layout == R.layout.profile) {
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-            toolbar.setBackgroundColor(Color.BLACK);
+            toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
             toolbar.setTitle("Setup Information");
             toolbar.setNavigationIcon(R.drawable.back);
             toolbar.setNavigationOnClickListener(new View.OnClickListener() {
