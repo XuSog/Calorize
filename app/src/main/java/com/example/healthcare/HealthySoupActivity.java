@@ -111,7 +111,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("6");
                 data.add("41.36");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.porksouppic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -129,7 +129,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("1");
                 data.add("0");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.ricepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -147,7 +147,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("2.52");
                 data.add("0");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.brownricepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -164,7 +164,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("0");
                 data.add("0");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.vegetablepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -182,7 +182,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("2.21");
                 data.add("0");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.tofupic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -199,7 +199,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("1.2");
                 data.add("0");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.pigearpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -216,7 +216,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("10.2");
                 data.add("60.6");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.porktonguepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -233,7 +233,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("6.16");
                 data.add("30.6");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.chicmeatpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -251,7 +251,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("3.27");
                 data.add("378.8");
                 intent.putExtra(KEY, data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.chicliverpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
