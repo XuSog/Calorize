@@ -32,7 +32,9 @@
 
             android:id="@+id/porkSoupButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
 
@@ -42,7 +44,10 @@
 
             android:id="@+id/whiteRiceButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
 
@@ -52,7 +57,10 @@
 
             android:id="@+id/brownRiceButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
 
             android:layout_height="150dp"
@@ -63,7 +71,10 @@
 
             android:id="@+id/vegetableButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
 
             android:layout_height="150dp"
@@ -74,7 +85,10 @@
 
             android:id="@+id/tofuButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
 
@@ -85,7 +99,10 @@
 
             android:id="@+id/pigEarButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
 
             android:layout_height="150dp"
@@ -96,7 +113,10 @@
 
             android:id="@+id/pigTongueButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
 
             android:layout_height="150dp"
@@ -107,7 +127,10 @@
 
             android:id="@+id/chickenMeatButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
 
@@ -117,7 +140,9 @@
 
             android:id="@+id/chickenLiverButton"
             android:contentDescription="@string/app_name"
-
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
             android:layout_width="match_parent"
             android:layout_height="150dp"
 

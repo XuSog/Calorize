@@ -28,7 +28,7 @@ public class Medal_and_photo extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
-        toolbar.setTitle("Rewards");
+        toolbar.setTitle("Achievements & Rewards");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { finish(); }

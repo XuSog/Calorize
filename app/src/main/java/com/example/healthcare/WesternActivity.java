@@ -99,7 +99,7 @@ public class WesternActivity extends AppCompatActivity {
                 data.add("679");
                 data.add("12.5");
                 data.add("15.5");
-                data.add("117");
+                data.add("48");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.choppic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
@@ -117,7 +117,7 @@ public class WesternActivity extends AppCompatActivity {
                 data.add("430");
                 data.add("12.5");
                 data.add("15.5");
-                data.add("117");
+                data.add("12");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.frpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);

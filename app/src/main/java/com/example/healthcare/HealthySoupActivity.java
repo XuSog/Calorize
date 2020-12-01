@@ -249,7 +249,7 @@ public class HealthySoupActivity extends AppCompatActivity {
                 data.add("94.3");
                 data.add("14.6");
                 data.add("3.27");
-                data.add("378.8");
+                data.add("61.8");
                 intent.putExtra(KEY, data);
                 intent.putExtra("picture", R.drawable.chicliverpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);

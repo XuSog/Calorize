@@ -20,14 +20,12 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <TextView
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
-        android:textColor="#DA9552"
-        android:text="Energy\nTracking"
-        android:textSize="48sp"
-        android:gravity="center" />
+        android:layout_weight="0.6"
+        tools:context=".EnergyActivity"> </LinearLayout>
 
     <RadioGroup
         android:id="@+id/dateRadioGroup"

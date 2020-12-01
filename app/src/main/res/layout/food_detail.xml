@@ -25,6 +25,16 @@
         android:layout_height="0dp"
         android:layout_weight="2" />
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_weight="0.3"> </LinearLayout>
+
     <com.github.mikephil.charting.charts.BarChart
         android:id = "@+id/BarChart"
         android:layout_width = "match_parent"
@@ -32,12 +42,14 @@
         android:layout_weight="3.5"/>
 
     <TextView
+        android:id="@+id/index"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.4"
-        android:text="Health Index Level"
+        android:text="Health Level Index [ ? ]"
         android:layout_gravity="center"
         android:gravity="center"
+        android:textColor="#DA9552"
         android:textSize="24dp" />
 
     <LinearLayout
@@ -55,6 +67,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="#DA9552"
         android:text="Cancel" />
 
     <Button
@@ -62,6 +75,7 @@
         android:layout_width="0dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
+        android:background="#DA9552"
         android:text="Select" />
 
     </LinearLayout>

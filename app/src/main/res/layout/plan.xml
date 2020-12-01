@@ -19,7 +19,8 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="You can choose one of the 4 sports to cosume your energy."/>
+            android:textColor="@color/black"
+            android:text="You are advised to take part in one of these aerobic exercises with a duration as listed"/>
     </LinearLayout>
 
 

@@ -73,17 +73,16 @@ public class EnergyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.energy_activity);
 
-        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
-
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
-        toolbar.setTitle("About Me");
+        toolbar.setTitle("Energy Tracking");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { finish(); }
         });
 
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
         SharedPreferences sharedPreferences = getSharedPreferences("shared preferences", MODE_PRIVATE);
         Gson gson = new Gson();
         String json = sharedPreferences.getString("data list", null);

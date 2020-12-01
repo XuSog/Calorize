@@ -109,7 +109,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("162");
                 data.add("5");
                 data.add("7");
-                data.add("190");
+                data.add("34");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.pratapic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
@@ -126,7 +126,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("319");
                 data.add("13");
                 data.add("15");
-                data.add("194");
+                data.add("39");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.eggpratapic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
@@ -210,9 +210,9 @@ public class IndianActivity extends AppCompatActivity {
                 data.clear();
                 data.add("CHICKEN CURRY");
                 data.add("966");
-                data.add("52");
-                data.add("61");
-                data.add("164");
+                data.add("43");
+                data.add("25");
+                data.add("33");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.chiccurrypic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);

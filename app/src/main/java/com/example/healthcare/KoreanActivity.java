@@ -253,7 +253,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("518");
                 data.add("37");
                 data.add("26");
-                data.add("260");
+                data.add("48");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.beeframenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
@@ -270,7 +270,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("505");
                 data.add("31");
                 data.add("23");
-                data.add("207");
+                data.add("37");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.kimchiramenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
@@ -287,7 +287,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("513");
                 data.add("25");
                 data.add("23");
-                data.add("216");
+                data.add("38");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.dumplingramenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
@@ -304,7 +304,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("608");
                 data.add("24");
                 data.add("28");
-                data.add("113");
+                data.add("27");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.fishfilletramenpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
@@ -510,7 +510,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("613");
                 data.add("23");
                 data.add("31");
-                data.add("345");
+                data.add("58");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.friedricepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);

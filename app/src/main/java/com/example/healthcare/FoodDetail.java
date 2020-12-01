@@ -2,6 +2,7 @@ package com.example.healthcare;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
@@ -48,11 +49,11 @@ public class FoodDetail extends AppCompatActivity {
     Button cancelButton;
     Button saveButton;
     String[] data;
+    TextView index;
 
     Double DayEnergy;
     Double WeekEnergy;
     Double MonthEnergy;
-
 
     Integer dayDate;
     Integer weekDate;
@@ -115,12 +116,21 @@ public class FoodDetail extends AppCompatActivity {
             }
         });
 
-        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+        index = findViewById(R.id.index);
+        index.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(FoodDetail.this)
+                        .setTitle("Health Level Index")
+                        .setMessage("An index for indicating how healthy this food is.\nThe closer the sum of food eaten per meal to 100, the healthier the meal is.")
+                        .setPositiveButton(android.R.string.yes, null).create().show();
+            }
+        });
 
+        mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
         dayDate= calendar.get(Calendar.DAY_OF_MONTH);
         weekDate=calendar.get(Calendar.DAY_OF_WEEK);
         monthDate=calendar.get(Calendar.MONTH)+1;
-
 
         if(mPreferences!=null){
             DayEnergy=Double.valueOf(mPreferences.getString(DAY_CONSUME_ENERGY_KEY,"0.0"));
@@ -160,7 +170,7 @@ public class FoodDetail extends AppCompatActivity {
 
         XAxis xAxis = barChart.getXAxis();
         xAxis.setLabelCount(4, true);
-        xAxis.setTextColor(Color.WHITE);
+        xAxis.setTextColor(Color.BLACK);
         xAxis.setValueFormatter(new MyXAxisFormatter());
         YAxis yAxis = barChart.getAxisLeft();
         yAxis.setTextSize(10f);
@@ -168,14 +178,14 @@ public class FoodDetail extends AppCompatActivity {
         yAxis.setAxisMaximum(150f);
         yAxis.setGranularity(150f);
         yAxis.setLabelCount(7, true);
-        yAxis.setTextColor(Color.WHITE);
+        yAxis.setTextColor(Color.BLACK);
         Legend legend = barChart.getLegend();
         legend.setEnabled(false);
 
         getEntries();
         barDataSet = new BarDataSet(barEntries, "Nutrients");
         barDataSet.setColors(ColorTemplate.VORDIPLOM_COLORS);
-        barDataSet.setValueTextColor(Color.WHITE);
+        barDataSet.setValueTextColor(Color.BLACK);
         barDataSet.setValueTextSize(18f);
 
         barData = new BarData(barDataSet);

@@ -134,7 +134,7 @@ public class ChickenRiceActivity extends AppCompatActivity {
                 data.add("318");
                 data.add("25.1");
                 data.add("1.85");
-                data.add("76.0");
+                data.add("54.0");
                 intent.putExtra(KEY,data);
                 intent.putExtra("picture", R.drawable.wanton);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);

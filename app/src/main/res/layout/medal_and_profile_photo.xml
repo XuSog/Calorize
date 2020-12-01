@@ -30,29 +30,66 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="@color/black"
             android:textSize="80px"
-            android:text="Healthy Diet Medal">
+            android:textColor="#DA9552"
+            android:gravity="center"
+            android:text="Healthy Diet Medals">
             
         </TextView>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            tools:context=".EnergyActivity"> </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:background="#F7CA65"
+            android:alpha="0.5"
+            android:layout_height="70dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            tools:context=".EnergyActivity">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:textSize="40px"
-            android:text="You need to keep your daily calories intake neither too low nor too high">
+            android:text="Keep it up with your healthy daily intake of food, doing well in a stroke will result in a reward from us!">
             
         </TextView>
-        
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            tools:context=".EnergyActivity"> </LinearLayout>
         
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/one_day_medal"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/locked">
                 
@@ -61,6 +98,8 @@
                 android:id="@+id/three_day_medal"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="10dp"
                 android:layout_weight="1"
                 android:background="@drawable/locked">
 
@@ -96,12 +135,17 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
             android:orientation="horizontal">
             <ImageView
                 android:id="@+id/seven_day_medal"
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_weight="1"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/locked">
 
             </ImageView>
@@ -110,6 +154,8 @@
                 android:layout_width="0dp"
                 android:layout_height="200dp"
                 android:layout_weight="1"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
                 android:background="@drawable/locked">
 
             </ImageView>
@@ -141,27 +187,64 @@
                     android:gravity="center"
                     ></TextView>
         </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            tools:context=".EnergyActivity"> </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/black"
+                android:textColor="#DA9552"
                 android:textSize="80px"
+                android:gravity="center"
                 android:text="Profile Photo Collection">
                 
             </TextView>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                tools:context=".EnergyActivity"> </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:background="#F7CA65"
+                android:layout_height="70dp"
+                android:alpha="0.5"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                tools:context=".EnergyActivity">
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
                 android:textSize="40px"
-                android:text="Try to get medals to unlock more cute photo!">
+                android:text="Try to get medals to unlock more cute photos which you can use as your profile picture!">
                 
-            </TextView>
+            </TextView> </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                tools:context=".EnergyActivity"> </LinearLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -171,7 +254,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" >
                     <ImageView
                         android:id="@+id/p00"
                         android:layout_width="0dp"
@@ -229,7 +314,9 @@
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    >
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
                     <ImageView
                         android:id="@+id/p11"
                         android:layout_width="0dp"
@@ -255,7 +342,10 @@
                 </LinearLayout>
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp">
                     <Button
                         android:id="@+id/b4"
                         android:layout_width="0dp"

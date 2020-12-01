@@ -39,7 +39,7 @@ public class CanteenActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationIcon(R.drawable.back);
         toolbar.setBackgroundColor(Color.rgb(218, 149, 82));
-        toolbar.setTitle("Select Store");
+        toolbar.setTitle("Select Stall");
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) { finish(); }
