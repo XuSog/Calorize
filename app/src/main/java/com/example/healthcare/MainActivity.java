@@ -61,19 +61,6 @@ public class MainActivity extends AppCompatActivity {
         setTitle("Calorize");
         changeLayout(R.layout.activity_main);
         date=new java.util.Date();
-
-
-
-        profileButton=findViewById(R.id.profilePic);
-        Bundle bundle = getIntent().getExtras();
-        if (bundle != null){
-            temp_0 = bundle.getInt("pic");
-            profileButton.setImageResource(temp_0);
-        }
-
-
-
-
     }
 
     @Override
@@ -118,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
 
 
         if (layout == R.layout.activity_main) {
-            /**/
             profileButton = findViewById(R.id.profilePic);
             profileButton.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -127,6 +113,13 @@ public class MainActivity extends AppCompatActivity {
                     changeLayout(R.layout.profile);
                 }
             });
+
+            profileButton=findViewById(R.id.profilePic);
+            Bundle bundle = getIntent().getExtras();
+            if (bundle != null){
+                temp_0 = bundle.getInt("pic");
+                profileButton.setImageResource(temp_0);
+            }
 
             loadData();
             TextView view = findViewById(R.id.userName);
@@ -160,7 +153,6 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-
             buttonPlan = findViewById(R.id.plan);
             buttonPlan.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -176,7 +168,6 @@ public class MainActivity extends AppCompatActivity {
                     Intent intent = new Intent(MainActivity.this, Plan.class);
                     startActivity(intent);
                 }
-
             });
 
             button_medal_and_photo = findViewById(R.id.button_Medal_and_Photo);
@@ -187,14 +178,9 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity. this, "Please set up your information first",Toast.LENGTH_SHORT).show();
                         return;
                     }
-                    /*if (HealthySoupActivity.Get_valueof_dayconsume()==0 ||HealthySoupActivity.Get_valueof_daydesire()==0 ){
-                        Toast.makeText(MainActivity. this, "Not available before 'About Me'",Toast.LENGTH_SHORT).show();
-                        return;
-                    }*/
                     Intent intent = new Intent(MainActivity.this, Medal_and_photo.class);
                     startActivity(intent);
                 }
-
             });
 
             Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
