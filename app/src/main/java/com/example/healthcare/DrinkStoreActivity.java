@@ -89,7 +89,7 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 data.add("3.25");
                 data.add("9");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.milopic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -107,7 +107,7 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 data.add("4");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.kopipic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -125,7 +125,7 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 data.add("0");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.barleypic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -142,7 +142,7 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 data.add("0");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.tehpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -160,7 +160,7 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 data.add("4");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.toastpic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -177,7 +177,7 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 data.add("15");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.sys1d);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.wafflepic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
