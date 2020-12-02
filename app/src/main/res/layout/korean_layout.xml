@@ -65,7 +65,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/platebeefpic" />
+                android:background="@drawable/newplatebeef" />
 
             <com.example.healthcare.CustomImageButton
 
@@ -107,7 +107,7 @@
 
                 android:layout_height="150dp"
 
-                android:background="@drawable/kimchiramenpic" />
+                android:background="@drawable/newkimchiramen" />
 
             <com.example.healthcare.CustomImageButton
 
