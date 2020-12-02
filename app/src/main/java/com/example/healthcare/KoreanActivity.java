@@ -94,22 +94,22 @@ public class KoreanActivity extends AppCompatActivity {
 
         plateSabaFishSetButton.setText("Plate Saba Fish Set");
         plateSabaFishSetButton.setTextSize(80f);
-        plateSabaFishSetButton.setColor(Color.BLACK);
+        plateSabaFishSetButton.setColor(Color.WHITE);
 
         plateChickenSetButton.setText("Plate Chicken Set");
         plateChickenSetButton.setTextSize(80f);
-        plateChickenSetButton.setColor(Color.BLACK);
+        plateChickenSetButton.setColor(Color.WHITE);
 
         plateBeefSetButton.setText("Plate Beef Set");
         plateBeefSetButton.setTextSize(80f);
-        plateBeefSetButton.setColor(Color.BLACK);
+        plateBeefSetButton.setColor(Color.WHITE);
 
         plateSabaFishNChickenSetButton.setText("Plate Saba Fish N Chicken Set");
-        plateSabaFishNChickenSetButton.setColor(Color.BLACK);
+        plateSabaFishNChickenSetButton.setColor(Color.WHITE);
         plateSabaFishNChickenSetButton.setTextSize(80f);
 
         beefRamenButton.setText("Beef Ramen");
-        beefRamenButton.setColor(Color.BLACK);
+        beefRamenButton.setColor(Color.WHITE);
         beefRamenButton.setTextSize(80f);
 
         kimichiRamenButton.setText("Kimchi Ramen");
@@ -122,18 +122,18 @@ public class KoreanActivity extends AppCompatActivity {
 
         fishFilletRamenButton.setText("Fish Fillet");
         fishFilletRamenButton.setTextSize(80f);
-        fishFilletRamenButton.setColor(Color.BLACK);
+        fishFilletRamenButton.setColor(Color.WHITE);
 
         fryEbiNChickenKatsuBentoButton.setText("Fry Ebi N Chicken Katsu Set Bento");
-        fryEbiNChickenKatsuBentoButton.setColor(Color.BLACK);
+        fryEbiNChickenKatsuBentoButton.setColor(Color.WHITE);
         fryEbiNChickenKatsuBentoButton.setTextSize(80f);
 
         chickenKatsuNScallopBentoButton.setText("Chicken Katsu N Scallop Bento");
-        chickenKatsuNScallopBentoButton.setColor(Color.BLACK);
+        chickenKatsuNScallopBentoButton.setColor(Color.WHITE);
         chickenKatsuNScallopBentoButton.setTextSize(80f);
 
         fishFilletNChickenKatsuBentoButton.setText("Fish Fillet N Chicken Katsu Bento");
-        fishFilletNChickenKatsuBentoButton.setColor(Color.BLACK);
+        fishFilletNChickenKatsuBentoButton.setColor(Color.WHITE);
         fishFilletNChickenKatsuBentoButton.setTextSize(80f);
 
         chickenKatsuNJapaneseCurryRiceButton.setText("Chicken Katsu N Japanese Curry Rice Button");
@@ -141,15 +141,15 @@ public class KoreanActivity extends AppCompatActivity {
         chickenKatsuNJapaneseCurryRiceButton.setTextSize(80f);
 
         sabaFishNChickenKatsuBentoButton.setText("Saba Fish N Chicken Katsu");
-        sabaFishNChickenKatsuBentoButton.setColor(Color.BLACK);
+        sabaFishNChickenKatsuBentoButton.setColor(Color.WHITE);
         sabaFishNChickenKatsuBentoButton.setTextSize(80f);
 
         salmonFishNChickenKatsuBentoButton.setText("Salmon Fish N Chicken Katsu Bento");
-        salmonFishNChickenKatsuBentoButton.setColor(Color.BLACK);
+        salmonFishNChickenKatsuBentoButton.setColor(Color.WHITE);
         salmonFishNChickenKatsuBentoButton.setTextSize(80f);
 
         salmonFishNPrawnBallBentoButton.setText("Salmon Fish N Prawn Ball Bento");
-        salmonFishNPrawnBallBentoButton.setColor(Color.BLACK);
+        salmonFishNPrawnBallBentoButton.setColor(Color.WHITE);
         salmonFishNPrawnBallBentoButton.setTextSize(80f);
 
         fishFilletNFryEbiBentoButton.setText("Salmon Fish N Fry Ebi Bento");
@@ -160,7 +160,7 @@ public class KoreanActivity extends AppCompatActivity {
         chickenKatsuSetButton.setTextSize(80f);
 
         chickenKatsuNJapaneseCurryRiceButton.setText("Chicken Katsu N Japanese Curry Rice");
-        fishFilletNFryEbiBentoButton.setColor(Color.BLACK);
+        fishFilletNFryEbiBentoButton.setColor(Color.WHITE);
         fishFilletNFryEbiBentoButton.setTextSize(80f);
 
         chickenKatsuNPrawnBallBentoButton.setText("Chicken Katsu N Prawn Ball Bento");
@@ -168,7 +168,7 @@ public class KoreanActivity extends AppCompatActivity {
         chickenKatsuNPrawnBallBentoButton.setTextSize(80f);
 
         kimchiSoupButton.setText("Kimchi Soup");
-        kimchiSoupButton.setColor(Color.BLACK);
+        kimchiSoupButton.setColor(Color.WHITE);
         kimchiSoupButton.setTextSize(80f);
 
         friedRiceButton.setText("Fried Rice");
@@ -221,7 +221,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("14");
                 data.add("53");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.platebeefpic);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.newplatebeef);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -272,7 +272,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("23");
                 data.add("37");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.kimchiramenpic);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.newkimchiramen);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
