@@ -30,18 +30,16 @@ public class Data {
 
         if(Data.first_use==0){
 
-            if (true){
-                Data.add_days();
-                Data.update_date_data(date_0);
-            }
-            /*
-            plz change this into:
-            if (date_0.toString().substring(0,7).equals(Data.date_0_data.toString().substring(0,7))){
+            /*if (true){
                 Data.add_days();
                 Data.update_date_data(date_0);
             }
 
-             */
+            plz change this into: */
+            if (! date_0.toString().substring(0,7).equals(Data.date_0_data.toString().substring(0,7))){
+                Data.add_days();
+                Data.update_date_data(date_0);
+            }
         }
         if (Data.first_use==1){
             Data.date_0_data=Data.get_Date();

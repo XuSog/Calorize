@@ -126,6 +126,7 @@ public class MainActivity extends AppCompatActivity {
             editor.putString("three", json);
             editor.putString("four", "easter egg");
             editor.putString("five", "1");
+            editor.putString("pic", "00");
             editor.commit();
             profileButton = findViewById(R.id.profilePic);
             profileButton.setBackgroundResource(R.drawable.p00);
@@ -136,7 +137,6 @@ public class MainActivity extends AppCompatActivity {
 
     protected void changeLayout(int layout){
         setContentView(layout);
-
 
         if (layout == R.layout.activity_main) {
             profileButton = findViewById(R.id.profilePic);
@@ -296,6 +296,19 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     data.set(5,gender[0]);
+                    if (! userAge.getText().toString().isEmpty()) {
+                        try{
+                            int age = Integer.parseInt(userAge.getText().toString());
+                            if (age <= 0 || age > 125) throw new Exception();
+                            data.set(4, userAge.getText().toString());
+                        }
+                        catch (Exception e){
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle("Wrong Format")
+                                    .setMessage("Your age should be a positive integer between 1 to 125.")
+                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userAge.setText(data.get(4))).create().show();
+                        }
+                    }
                     if (! userHeight.getText().toString().isEmpty()) data.set(2, userHeight.getText().toString());
                     if (! userWeight.getText().toString().isEmpty()) data.set(3, userWeight.getText().toString());
                     if (! userAge.getText().toString().isEmpty()) data.set(4, userAge.getText().toString());

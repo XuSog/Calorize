@@ -155,8 +155,8 @@ public class EnergyActivity extends AppCompatActivity {
         imageView1=findViewById(R.id.imageView1);
         imageView2=findViewById(R.id.imageView2);
         imageView3=findViewById(R.id.imageView3);
-        energyConsumeText.setText(Math.round(DayConsumeEnergy)+"");
-        energyDesireText.setText(Math.round(DayDesireEnergy )+"");
+        energyConsumeText.setText(Math.round(DayConsumeEnergy)+" Kcal");
+        energyDesireText.setText(Math.round(DayDesireEnergy )+" Kcal");
         if(DayConsumeEnergy<=DayDesireEnergy){
             imageView1.setImageResource(R.drawable.thumbup);
             imageView2.setImageResource(R.drawable.thumbup);
@@ -171,8 +171,8 @@ public class EnergyActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (weekButton.getId() == checkedId) {
 
-                    energyConsumeText.setText(Math.round(WeekConsumeEnergy )+"");
-                    energyDesireText.setText(Math.round(WeekDesireEnergy )+"");
+                    energyConsumeText.setText(Math.round(WeekConsumeEnergy )+" Kcal");
+                    energyDesireText.setText(Math.round(WeekDesireEnergy )+" Kcal");
                     if(WeekConsumeEnergy<=WeekDesireEnergy){
                         imageView1.setImageResource(R.drawable.thumbup);
                         imageView2.setImageResource(R.drawable.thumbup);
@@ -184,8 +184,8 @@ public class EnergyActivity extends AppCompatActivity {
                     }
 
                 } else if (monthButton.getId() == checkedId) {
-                    energyConsumeText.setText(Math.round(MonthConsumeEnergy )+"");
-                    energyDesireText.setText(Math.round(MonthDesireEnergy)+"");
+                    energyConsumeText.setText(Math.round(MonthConsumeEnergy )+" Kcal");
+                    energyDesireText.setText(Math.round(MonthDesireEnergy)+" Kcal");
                     if(MonthConsumeEnergy<=MonthDesireEnergy){
                         imageView1.setImageResource(R.drawable.thumbup);
                         imageView2.setImageResource(R.drawable.thumbup);
@@ -197,8 +197,8 @@ public class EnergyActivity extends AppCompatActivity {
                     }
 
                 } else if (dayButton.getId() == checkedId) {
-                    energyConsumeText.setText(Math.round(DayConsumeEnergy )+"");
-                    energyDesireText.setText(Math.round(DayDesireEnergy )+"");
+                    energyConsumeText.setText(Math.round(DayConsumeEnergy )+" Kcal");
+                    energyDesireText.setText(Math.round(DayDesireEnergy )+" Kcal");
                     if(DayConsumeEnergy<=DayDesireEnergy){
                         imageView1.setImageResource(R.drawable.thumbup);
                         imageView2.setImageResource(R.drawable.thumbup);
