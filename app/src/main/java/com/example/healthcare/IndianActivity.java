@@ -89,15 +89,15 @@ public class IndianActivity extends AppCompatActivity {
 
         chickenCurryButton.setText("Chicken Curry");
         chickenCurryButton.setTextSize(80f);
-        chickenCurryButton.setColor(Color.BLACK);
+        chickenCurryButton.setColor(Color.WHITE);
 
         fishCurryButton.setText("Fish Curry");
         fishCurryButton.setTextSize(80f);
-        fishCurryButton.setColor(Color.BLACK);
+        fishCurryButton.setColor(Color.WHITE);
 
         vegetableCurryButton.setText("Vegetable Curry");
         vegetableCurryButton.setTextSize(80f);
-        vegetableCurryButton.setColor(Color.BLACK);
+        vegetableCurryButton.setColor(Color.WHITE);
 
         plainPrataButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -128,7 +128,7 @@ public class IndianActivity extends AppCompatActivity {
                 data.add("15");
                 data.add("39");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.eggpratapic);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.neweggprata);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
