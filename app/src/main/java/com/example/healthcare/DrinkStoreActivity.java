@@ -89,7 +89,7 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 data.add("3.25");
                 data.add("9");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.milopic);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.milo_pic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
@@ -160,7 +160,7 @@ public class DrinkStoreActivity extends AppCompatActivity {
                 data.add("4");
                 data.add("0");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.toastpic);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.toast_pic);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });

@@ -59,15 +59,15 @@ public class ChickenRiceActivity extends AppCompatActivity {
 
         braisedChickenRiceButton.setText("Braised Chicken Rice");
         braisedChickenRiceButton.setTextSize(80f);
-        braisedChickenRiceButton.setColor(Color.WHITE);
+        braisedChickenRiceButton.setColor(Color.BLACK);
 
         charSiewRiceButton.setText("Char Siew Rice");
-        charSiewRiceButton.setColor(Color.WHITE);
+        charSiewRiceButton.setColor(Color.BLACK);
         charSiewRiceButton.setTextSize(80f);
 
         wantonNoodleSoupButton.setText("Wanton Noodle Soup");
         wantonNoodleSoupButton.setTextSize(80f);
-        wantonNoodleSoupButton.setColor(Color.WHITE);
+        wantonNoodleSoupButton.setColor(Color.BLACK);
 
 
 

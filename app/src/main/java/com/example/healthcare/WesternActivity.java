@@ -59,7 +59,7 @@ public class WesternActivity extends AppCompatActivity {
 
         chickenChopButton.setText("Chicken Chop");
         chickenChopButton.setTextSize(80f);
-        chickenChopButton.setColor(Color.WHITE);
+        chickenChopButton.setColor(Color.BLACK);
 
         friedRiceButton.setText("Fried Rice");
         friedRiceButton.setColor(Color.BLACK);
@@ -67,7 +67,7 @@ public class WesternActivity extends AppCompatActivity {
 
         spaghettiBologneseButton.setText("Spaghetti Bolognese");
         spaghettiBologneseButton.setTextSize(80f);
-        spaghettiBologneseButton.setColor(Color.WHITE);
+        spaghettiBologneseButton.setColor(Color.BLACK);
 
 
 

@@ -92,24 +92,24 @@ public class KoreanActivity extends AppCompatActivity {
         fishFilletNFryEbiBentoButton=findViewById(R.id.fishFilletNFryEbiBentoButton);
         friedRiceButton=findViewById(R.id.friedRiceButton);
 
-        plateSabaFishSetButton.setText("Plate Saba Fish Set");
+        plateSabaFishSetButton.setText("Plate Saba Fish");
         plateSabaFishSetButton.setTextSize(80f);
-        plateSabaFishSetButton.setColor(Color.WHITE);
+        plateSabaFishSetButton.setColor(Color.BLACK);
 
         plateChickenSetButton.setText("Plate Chicken Set");
         plateChickenSetButton.setTextSize(80f);
-        plateChickenSetButton.setColor(Color.WHITE);
+        plateChickenSetButton.setColor(Color.BLACK);
 
         plateBeefSetButton.setText("Plate Beef Set");
         plateBeefSetButton.setTextSize(80f);
-        plateBeefSetButton.setColor(Color.WHITE);
+        plateBeefSetButton.setColor(Color.BLACK);
 
-        plateSabaFishNChickenSetButton.setText("Plate Saba Fish N Chicken Set");
-        plateSabaFishNChickenSetButton.setColor(Color.WHITE);
+        plateSabaFishNChickenSetButton.setText("Saba Fish Chicken");
+        plateSabaFishNChickenSetButton.setColor(Color.BLACK);
         plateSabaFishNChickenSetButton.setTextSize(80f);
 
         beefRamenButton.setText("Beef Ramen");
-        beefRamenButton.setColor(Color.WHITE);
+        beefRamenButton.setColor(Color.BLACK);
         beefRamenButton.setTextSize(80f);
 
         kimichiRamenButton.setText("Kimchi Ramen");
@@ -122,53 +122,53 @@ public class KoreanActivity extends AppCompatActivity {
 
         fishFilletRamenButton.setText("Fish Fillet");
         fishFilletRamenButton.setTextSize(80f);
-        fishFilletRamenButton.setColor(Color.WHITE);
+        fishFilletRamenButton.setColor(Color.BLACK);
 
-        fryEbiNChickenKatsuBentoButton.setText("Fry Ebi N Chicken Katsu Set Bento");
-        fryEbiNChickenKatsuBentoButton.setColor(Color.WHITE);
+        fryEbiNChickenKatsuBentoButton.setText("Ebi Chicken Katsu");
+        fryEbiNChickenKatsuBentoButton.setColor(Color.BLACK);
         fryEbiNChickenKatsuBentoButton.setTextSize(80f);
 
-        chickenKatsuNScallopBentoButton.setText("Chicken Katsu N Scallop Bento");
-        chickenKatsuNScallopBentoButton.setColor(Color.WHITE);
+        chickenKatsuNScallopBentoButton.setText("Chicken Katsu Scallop");
+        chickenKatsuNScallopBentoButton.setColor(Color.BLACK);
         chickenKatsuNScallopBentoButton.setTextSize(80f);
 
-        fishFilletNChickenKatsuBentoButton.setText("Fish Fillet N Chicken Katsu Bento");
-        fishFilletNChickenKatsuBentoButton.setColor(Color.WHITE);
+        fishFilletNChickenKatsuBentoButton.setText("Fish Chicken Katsu");
+        fishFilletNChickenKatsuBentoButton.setColor(Color.BLACK);
         fishFilletNChickenKatsuBentoButton.setTextSize(80f);
 
-        chickenKatsuNJapaneseCurryRiceButton.setText("Chicken Katsu N Japanese Curry Rice Button");
+        chickenKatsuNJapaneseCurryRiceButton.setText("Chicken Katsu Curry Rice");
         chickenKatsuNJapaneseCurryRiceButton.setColor(Color.BLACK);
         chickenKatsuNJapaneseCurryRiceButton.setTextSize(80f);
 
-        sabaFishNChickenKatsuBentoButton.setText("Saba Fish N Chicken Katsu");
-        sabaFishNChickenKatsuBentoButton.setColor(Color.WHITE);
+        sabaFishNChickenKatsuBentoButton.setText("Saba Fish N Chicken");
+        sabaFishNChickenKatsuBentoButton.setColor(Color.BLACK);
         sabaFishNChickenKatsuBentoButton.setTextSize(80f);
 
-        salmonFishNChickenKatsuBentoButton.setText("Salmon Fish N Chicken Katsu Bento");
-        salmonFishNChickenKatsuBentoButton.setColor(Color.WHITE);
+        salmonFishNChickenKatsuBentoButton.setText("Salmon Chicken Katsu");
+        salmonFishNChickenKatsuBentoButton.setColor(Color.BLACK);
         salmonFishNChickenKatsuBentoButton.setTextSize(80f);
 
-        salmonFishNPrawnBallBentoButton.setText("Salmon Fish N Prawn Ball Bento");
-        salmonFishNPrawnBallBentoButton.setColor(Color.WHITE);
+        salmonFishNPrawnBallBentoButton.setText("Salmon n Prawn Ball");
+        salmonFishNPrawnBallBentoButton.setColor(Color.BLACK);
         salmonFishNPrawnBallBentoButton.setTextSize(80f);
 
-        fishFilletNFryEbiBentoButton.setText("Salmon Fish N Fry Ebi Bento");
+        fishFilletNFryEbiBentoButton.setText("Salmon and Ebi ");
         fishFilletNFryEbiBentoButton.setColor(Color.BLACK);
         fishFilletNFryEbiBentoButton.setTextSize(80f);
         chickenKatsuSetButton.setText("Chicken Katsu Set");
         chickenKatsuSetButton.setColor(Color.BLACK);
         chickenKatsuSetButton.setTextSize(80f);
 
-        chickenKatsuNJapaneseCurryRiceButton.setText("Chicken Katsu N Japanese Curry Rice");
-        fishFilletNFryEbiBentoButton.setColor(Color.WHITE);
+        chickenKatsuNJapaneseCurryRiceButton.setText("Chicken Curry Rice");
+        fishFilletNFryEbiBentoButton.setColor(Color.BLACK);
         fishFilletNFryEbiBentoButton.setTextSize(80f);
 
-        chickenKatsuNPrawnBallBentoButton.setText("Chicken Katsu N Prawn Ball Bento");
+        chickenKatsuNPrawnBallBentoButton.setText("Chicken Prawn Bento");
         chickenKatsuNPrawnBallBentoButton.setColor(Color.BLACK);
         chickenKatsuNPrawnBallBentoButton.setTextSize(80f);
 
         kimchiSoupButton.setText("Kimchi Soup");
-        kimchiSoupButton.setColor(Color.WHITE);
+        kimchiSoupButton.setColor(Color.BLACK);
         kimchiSoupButton.setTextSize(80f);
 
         friedRiceButton.setText("Fried Rice");

@@ -55,17 +55,17 @@
             android:layout_marginRight="15dp"
             tools:context=".EnergyActivity">
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            android:layout_gravity="center"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:textSize="40px"
-            android:text="Keep it up with your healthy daily intake of food, doing well in a stroke will result in a reward from us!">
-            
-        </TextView>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:text="Keep it up with your healthy daily intake of food, complete more tasks to unlock new profile icon!"
+                android:textColor="@color/black"
+                android:textSize="18sp">
+
+            </TextView>
 
         </LinearLayout>
 
@@ -84,6 +84,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginBottom="10dp"
             android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/one_day_medal"
                 android:layout_width="0dp"
@@ -91,9 +92,10 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/locked">
-                
+                android:background="@drawable/lock">
+
             </ImageView>
+
             <ImageView
                 android:id="@+id/three_day_medal"
                 android:layout_width="0dp"
@@ -101,7 +103,7 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginBottom="10dp"
                 android:layout_weight="1"
-                android:background="@drawable/locked">
+                android:background="@drawable/lock">
 
             </ImageView>
            
@@ -116,7 +118,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_weight="1"
-                android:text="Keep healthy diet for 1 day (not finished)"
+                android:text="Keep healthy diet for 1 day (Uncompleted)"
                 android:gravity="center"
                 ></TextView>
             <TextView
@@ -125,7 +127,7 @@
                 android:layout_height="wrap_content"
                 android:textColor="@color/black"
                 android:layout_weight="1"
-                android:text="Keep healthy diet for 3 day (not finished)"
+                android:text="Keep healthy diet for 3 day (Uncompleted)"
                 android:gravity="center"
                 ></TextView>
      
@@ -139,6 +141,7 @@
             android:layout_marginRight="10dp"
             android:layout_marginTop="10dp"
             android:orientation="horizontal">
+
             <ImageView
                 android:id="@+id/seven_day_medal"
                 android:layout_width="0dp"
@@ -146,9 +149,10 @@
                 android:layout_weight="1"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/locked">
+                android:background="@drawable/lock">
 
             </ImageView>
+
             <ImageView
                 android:id="@+id/one_month_medal"
                 android:layout_width="0dp"
@@ -156,7 +160,7 @@
                 android:layout_weight="1"
                 android:layout_marginLeft="10dp"
                 android:layout_marginTop="10dp"
-                android:background="@drawable/locked">
+                android:background="@drawable/lock">
 
             </ImageView>
             
@@ -174,7 +178,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:layout_weight="1"
-                    android:text="Keep healthy diet for 7 day (not finished)"
+                    android:text="Keep healthy diet for 7 day (Uncompleted)"
                     android:gravity="center"
                     ></TextView>
                 <TextView
@@ -183,7 +187,7 @@
                     android:layout_height="wrap_content"
                     android:textColor="@color/black"
                     android:layout_weight="1"
-                    android:text="Keep healthy diet for 30 day (not finished)"
+                    android:text="Keep healthy diet for 30 day (Uncompleted)"
                     android:gravity="center"
                     ></TextView>
         </LinearLayout>
@@ -204,7 +208,7 @@
                 android:textColor="#DA9552"
                 android:textSize="80px"
                 android:gravity="center"
-                android:text="Profile Photo Collection">
+                android:text="Profile Picture Unlocked">
                 
             </TextView>
 
@@ -233,7 +237,7 @@
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="10dp"
                 android:textSize="40px"
-                android:text="Try to get medals to unlock more cute photos which you can use as your profile picture!">
+                android:text="Keep it up with the hard work and enjoy the following Icon!">
                 
             </TextView> </LinearLayout>
 
@@ -263,7 +267,7 @@
                         android:layout_height="133dp"
                         android:layout_weight="1"
                         android:textColor="@color/black"
-                        android:background="@drawable/locked">
+                        android:background="@drawable/lock">
                     </ImageView>
 
                     <ImageView
@@ -272,7 +276,7 @@
                         android:layout_height="133dp"
                         android:layout_weight="1"
                         android:textColor="@color/black"
-                        android:background="@drawable/locked">
+                        android:background="@drawable/lock">
                     </ImageView>
                     <ImageView
                         android:id="@+id/p10"
@@ -280,7 +284,7 @@
                         android:layout_height="133dp"
                         android:layout_weight="1"
                         android:textColor="@color/black"
-                        android:background="@drawable/locked">
+                        android:background="@drawable/lock">
                     </ImageView>
                 </LinearLayout>
                 <LinearLayout
@@ -291,7 +295,7 @@
                         android:layout_width="0dp"
                         android:layout_height="75dp"
                         android:layout_weight="1"
-                        android:text="Set as photo"
+                        android:text="Set as Icon"
                         android:enabled="false">
                     </Button>
                     <Button
@@ -299,7 +303,7 @@
                         android:layout_width="0dp"
                         android:layout_height="75dp"
                         android:layout_weight="1"
-                        android:text="Set as photo"
+                        android:text="Set as Icon"
                         android:enabled="false">
                     </Button>
                     <Button
@@ -307,7 +311,7 @@
                         android:layout_width="0dp"
                         android:layout_height="75dp"
                         android:layout_weight="1"
-                        android:text="Set as photo"
+                        android:text="Set as Icon"
                         android:enabled="false">
                     </Button>
                 </LinearLayout>
@@ -322,7 +326,7 @@
                         android:layout_width="0dp"
                         android:layout_height="133dp"
                         android:layout_weight="1"
-                        android:background="@drawable/locked">
+                        android:background="@drawable/lock">
                     </ImageView>
 
                     <ImageView
@@ -330,14 +334,14 @@
                         android:layout_width="0dp"
                         android:layout_height="133dp"
                         android:layout_weight="1"
-                        android:background="@drawable/locked">
+                        android:background="@drawable/lock">
                     </ImageView>
                     <ImageView
                         android:id="@+id/p21"
                         android:layout_width="0dp"
                         android:layout_height="133dp"
                         android:layout_weight="1"
-                        android:background="@drawable/locked">
+                        android:background="@drawable/lock">
                     </ImageView>
                 </LinearLayout>
                 <LinearLayout
@@ -351,7 +355,7 @@
                         android:layout_width="0dp"
                         android:layout_height="75dp"
                         android:layout_weight="1"
-                        android:text="Set as photo"
+                        android:text="Set as Icon"
                         android:enabled="false">
                     </Button>
                     <Button
@@ -359,7 +363,7 @@
                         android:layout_width="0dp"
                         android:layout_height="75dp"
                         android:layout_weight="1"
-                        android:text="Set as photo"
+                        android:text="Set as Icon"
                         android:enabled="false">
                     </Button>
                     <Button
@@ -367,7 +371,7 @@
                         android:layout_width="0dp"
                         android:layout_height="75dp"
                         android:layout_weight="1"
-                        android:text="Set as photo"
+                        android:text="Set as Icon"
                         android:enabled="false">
                     </Button>
                 </LinearLayout>

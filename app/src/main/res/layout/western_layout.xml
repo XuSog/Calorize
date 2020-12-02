@@ -70,15 +70,15 @@
             <com.example.healthcare.CustomImageButton
 
                 android:id="@+id/spaghettiBologneseButton"
-                android:contentDescription="@string/app_name"
-                android:layout_marginTop="20dp"
-                android:layout_marginLeft="15dp"
-                android:layout_marginRight="15dp"
                 android:layout_width="match_parent"
-
                 android:layout_height="150dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="15dp"
 
-                android:background="@drawable/bologpic" />
+                android:background="@drawable/spaghttii"
+
+                android:contentDescription="@string/app_name" />
 
         </LinearLayout>
     </ScrollView>

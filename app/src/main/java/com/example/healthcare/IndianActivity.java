@@ -89,15 +89,15 @@ public class IndianActivity extends AppCompatActivity {
 
         chickenCurryButton.setText("Chicken Curry");
         chickenCurryButton.setTextSize(80f);
-        chickenCurryButton.setColor(Color.WHITE);
+        chickenCurryButton.setColor(Color.BLACK);
 
         fishCurryButton.setText("Fish Curry");
         fishCurryButton.setTextSize(80f);
-        fishCurryButton.setColor(Color.WHITE);
+        fishCurryButton.setColor(Color.BLACK);
 
         vegetableCurryButton.setText("Vegetable Curry");
         vegetableCurryButton.setTextSize(80f);
-        vegetableCurryButton.setColor(Color.WHITE);
+        vegetableCurryButton.setColor(Color.BLACK);
 
         plainPrataButton.setOnClickListener(new View.OnClickListener() {
             @Override

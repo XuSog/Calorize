@@ -189,24 +189,25 @@ public class Medal_and_photo extends AppCompatActivity {
         if (str=="one_day_medal"){
             i=findViewById(R.id.one_day_medal);
             x=findViewById(R.id.B1);
-            x.setText("Keep healthy diet for 1 day (Finished already)");
+            x.setText("Keep healthy diet for 1 day (Completed)");
             i.setImageResource(R.drawable.one_day);}
+
         if (str=="three_day_medal"){
             i=findViewById(R.id.three_day_medal);
             i.setImageResource(R.drawable.three_day);
             x=findViewById(R.id.B2);
-            x.setText("Keep healthy diet for 3 days (Finished already)");}
+            x.setText("Keep healthy diet for 3 days (Completed)");}
 
         if (str=="seven_day_medal"){
             i=findViewById(R.id.seven_day_medal);
             i.setImageResource(R.drawable.one_month);
             x=findViewById(R.id.B3);
-            x.setText("Keep healthy diet for 7 days (Finished already)");}
+            x.setText("Keep healthy diet for 7 days (Completed)");}
         if (str=="one_month_medal"){
             i=findViewById(R.id.one_month_medal);
             i.setImageResource(R.drawable.one_month);
             x=findViewById(R.id.B4);
-            x.setText("Keep healthy diet for 1 month (Finished already)");
+            x.setText("Keep healthy diet for 1 month (Completed)");
         }
 
 

@@ -59,14 +59,20 @@ public class Plan extends AppCompatActivity {
 
         mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
         Double DayConsumeEnergy = Double.valueOf(mPreferences.getString(FoodDetail.DAY_CONSUME_ENERGY_KEY, "0"));
-
-        Double standard_energy=(new Get_desire_day_energy(height, weight, age, gender).get_energy() + DayConsumeEnergy)/2;
-        double advised_value=advised_index*standard_energy;
+        Double standard_energy=new Get_desire_day_energy(height, weight, age, gender).get_energy();
+        double advised_value=DayConsumeEnergy-standard_energy;
         double max_value=max_index*standard_energy;
-        run.setText("Jogging: "+get_run_time(advised_value)+" h");
-        swim.setText("Swimming: "+get_swim_time(advised_value)+" h");
-        bicycle.setText("Cycling: "+get_bicyle_time(advised_value)+" h");
-        rope_skip.setText("Rope Skipping: "+get_rope_skip_time(advised_value)+" h");
+        if(advised_value>0){
+            run.setText("Run: "+get_run_time(advised_value)+" h");
+            swim.setText("Swim: "+get_swim_time(advised_value)+" h");
+            bicycle.setText("Bicycle: "+get_bicyle_time(advised_value)+" h");
+            rope_skip.setText("Rope_skip: "+get_rope_skip_time(advised_value)+" h");
+        }else{
+            run.setText("Run: "+get_run_time(0)+" h");
+            swim.setText("Swim: "+get_swim_time(0)+" h");
+            bicycle.setText("Bicycle: "+get_bicyle_time(0)+" h");
+            rope_skip.setText("Rope_skip: "+get_rope_skip_time(0)+" h");
+        }
     }
     private double get_swim_time(double energy){
         return new BigDecimal(energy/447).setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();

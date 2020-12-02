@@ -16,7 +16,7 @@
             android:id="@+id/toolbar"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary" />
+            android:background="#DA9552" />
 
     </com.google.android.material.appbar.AppBarLayout>
 
@@ -94,29 +94,32 @@
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
         android:paddingRight="16dp">
+
         <Button
             android:id="@+id/maleButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
             android:paddingLeft="16dp"
+            android:paddingTop="10dp"
             android:paddingRight="16dp"
+            android:paddingBottom="10dp"
             android:text="Male"
-            android:textSize="30dp" />
+            android:textSize="20dp"
+            app:backgroundTint="#DA9552" />
 
         <Button
             android:id="@+id/femaleButton"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:paddingTop="16dp"
-            android:paddingBottom="16dp"
             android:paddingLeft="16dp"
+            android:paddingTop="10dp"
             android:paddingRight="16dp"
+            android:paddingBottom="10dp"
             android:text="Female"
-            android:textSize="30dp" />
+            android:textSize="20dp"
+            app:backgroundTint="#DA9552" />
     </LinearLayout>
 
     <EditText
@@ -126,10 +129,10 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:paddingTop="16dp"
+        android:paddingTop="10dp"
         android:paddingBottom="16dp"
         android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingRight="10dp"
         android:inputType= "numberDecimal"
         android:textColor="@color/black"
         android:hint="Age"
@@ -145,29 +148,31 @@
         android:paddingRight="16dp"
         android:layout_weight="1">
 
-    <Button
-        android:id="@+id/cancelButton"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="16dp"
-        android:text="Cancel"
-        android:textSize="32dp" />
+        <Button
+            android:id="@+id/cancelButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="10dp"
+            android:text="Cancel"
+            android:textSize="25dp"
+            app:backgroundTint="#DA9552" />
 
-    <Button
-        android:id="@+id/saveButtonId"
-        android:layout_width="0dp"
-        android:layout_height="match_parent"
-        android:layout_weight="1"
-        android:paddingLeft="16dp"
-        android:paddingTop="16dp"
-        android:paddingRight="16dp"
-        android:paddingBottom="16dp"
-        android:text="Save"
-        android:textSize="32dp" />
+        <Button
+            android:id="@+id/saveButtonId"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingLeft="16dp"
+            android:paddingTop="10dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="10dp"
+            android:text="Save"
+            android:textSize="25dp"
+            app:backgroundTint="#DA9552" />
 
 
     </LinearLayout>
