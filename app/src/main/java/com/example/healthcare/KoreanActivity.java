@@ -221,7 +221,7 @@ public class KoreanActivity extends AppCompatActivity {
                 data.add("14");
                 data.add("53");
                 intent.putExtra(KEY,data);
-                intent.putExtra("picture", R.drawable.newplatebeef);  // R.drawable.sys1d to be replaced!
+                intent.putExtra("picture", R.drawable.ver3platebeef);  // R.drawable.sys1d to be replaced!
                 startActivity(intent);
             }
         });
