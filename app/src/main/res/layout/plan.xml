@@ -15,26 +15,46 @@
         android:background="?attr/colorPrimary" />
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp">
+        android:layout_height="0dp"
+        android:layout_weight="1">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="#DA9552"
+            android:alpha="0.7"
+            android:layout_weight="1">
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textColor="@color/black"
-            android:text="You are advised to take part in one of these aerobic exercises with a duration as listed"/>
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:textSize="16dp"
+            android:textColor= "@color/black"
+            android:gravity="center"
+            android:text="Based on your personal data and how much your daily intake is, you are advised to take part in one of these aerobic exercises with a duration as listed."/>
+    </LinearLayout>
     </LinearLayout>
 
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        
-        >
-       
+        android:layout_height="0dp"
+        android:layout_weight="4">
+
         <LinearLayout
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
             >
 
 
@@ -42,6 +62,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
+                android:alpha="0.8"
 
                 android:background="@drawable/run"/>
             <TextView
@@ -49,22 +70,29 @@
                 android:layout_height="0dp"
                 android:layout_weight="0.2"
                 android:text=""
-                android:textSize="20dp"
-                android:textColor="@color/black"
+                android:background="#DA9552"
+                android:alpha="0.7"
+                android:gravity="center"
+                android:textSize="16dp"
+                android:textColor= "@color/black"
+                android:layout_marginBottom="20dp"
                 android:id="@+id/run"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-
+                android:alpha="0.8"
                 android:background="@drawable/swim"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.2"
                 android:text=""
-                android:textSize="20dp"
-                android:textColor="@color/black"
+                android:background="#DA9552"
+                android:alpha="0.7"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textColor= "@color/black"
                 android:id="@+id/swim"/>
 
         </LinearLayout>
@@ -74,35 +102,47 @@
             android:layout_weight="1"
             android:layout_height="match_parent"
             android:orientation="vertical"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingBottom="16dp"
+            android:paddingTop="16dp"
             >
+
             <ImageView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-
-                android:background="@drawable/rope_skip"/>
+                android:alpha="0.8"
+                android:background="@drawable/rope_skip" />
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.2"
                 android:text=""
                 android:layout_gravity="center"
-                android:textSize="20dp"
-                android:textColor="@color/black"
+                android:background="#DA9552"
+                android:alpha="0.7"
+                android:textSize="16dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textColor= "@color/black"
                 android:id="@+id/rope_skip"/>
             <ImageView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
-
+                android:alpha="0.8"
                 android:background="@drawable/bicycle"/>
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="0.2"
                 android:text=""
-                android:textSize="20dp"
-                android:textColor="@color/black"
+                android:background="#DA9552"
+                android:alpha="0.7"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:textColor= "@color/black"
                 android:id="@+id/bicycle"/>
         </LinearLayout>
     </LinearLayout>

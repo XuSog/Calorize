@@ -110,7 +110,6 @@ public class MainActivity extends AppCompatActivity {
             preferencesEditor.apply();
             SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
             SharedPreferences.Editor editor = sharedPreferences.edit();
-
             editor.putString("one", "0");
             Gson gson = new Gson();
             String json = gson.toJson(new ArrayList<String>());

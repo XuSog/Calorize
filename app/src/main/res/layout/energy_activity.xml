@@ -21,11 +21,28 @@
     </com.google.android.material.appbar.AppBarLayout>
 
     <LinearLayout
-        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="0.6"
-        tools:context=".EnergyActivity"> </LinearLayout>
+        android:layout_height="110dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="30dp"
+        android:background="#DA9552"
+        android:alpha="0.7"
+        android:layout_weight="0">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:textSize="16dp"
+            android:textColor= "@color/black"
+            android:gravity="center"
+            android:text="The total intake of your energy in food wise are tracked throughout the period of your usage, and are summarized in terms of day, week, and month."/>
+    </LinearLayout>
 
     <RadioGroup
         android:id="@+id/dateRadioGroup"
@@ -40,26 +57,27 @@
         <RadioButton
             android:id="@+id/dayButton"
             android:text="Day"
-            android:textSize="30sp"
-            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textColor="#DA9552"
             android:checked="true"
 
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            />
         <RadioButton
             android:id="@+id/weekButton"
             android:text="Week"
-            android:textSize="30sp"
-            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textColor="#DA9552"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
         <RadioButton
             android:id="@+id/monthButton"
             android:text="Month"
-            android:textSize="30sp"
-            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textColor="#DA9552"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1" />
@@ -70,42 +88,52 @@
 
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
+        android:layout_weight="1"
         android:id="@+id/EnergyConsumeText"
         android:textColor="#DA9552"
         android:text="Consume Energy"
-        android:textSize="40sp"
+        android:textSize="50sp"
 
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="@drawable/border"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
+        />
 
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
         android:textColor="#DA9552"
+        android:gravity="center"
 
         android:text="Recommend"
-        android:textSize="60sp"
-
-        android:gravity="left" />
+        android:textSize="30sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="16dp"
 
         android:id="@+id/EnergyDesireText"
         android:text="Desire Energy"
-        android:textSize="60sp"
+        android:textSize="50sp"
         android:textColor="#DA9552"
-        android:gravity="center" />
+        android:gravity="center"
+        android:background="@drawable/border"/>
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1"
+        android:layout_weight="0.8"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
         tools:context=".EnergyActivity">
 
         <ImageView
@@ -113,6 +141,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/thumbup"/>
 
         <ImageView
@@ -120,6 +150,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/thumbup"/>
 
         <ImageView
@@ -127,6 +159,8 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
             android:background="@drawable/thumbup"/>
     </LinearLayout>
 

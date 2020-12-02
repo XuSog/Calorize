@@ -63,10 +63,10 @@ public class Plan extends AppCompatActivity {
         Double standard_energy=(new Get_desire_day_energy(height, weight, age, gender).get_energy() + DayConsumeEnergy)/2;
         double advised_value=advised_index*standard_energy;
         double max_value=max_index*standard_energy;
-        run.setText("Run: "+get_run_time(advised_value)+" h");
-        swim.setText("Swim: "+get_swim_time(advised_value)+" h");
-        bicycle.setText("Bicycle: "+get_bicyle_time(advised_value)+" h");
-        rope_skip.setText("Rope_skip: "+get_rope_skip_time(advised_value)+" h");
+        run.setText("Jogging: "+get_run_time(advised_value)+" h");
+        swim.setText("Swimming: "+get_swim_time(advised_value)+" h");
+        bicycle.setText("Cycling: "+get_bicyle_time(advised_value)+" h");
+        rope_skip.setText("Rope Skipping: "+get_rope_skip_time(advised_value)+" h");
     }
     private double get_swim_time(double energy){
         return new BigDecimal(energy/447).setScale(2,BigDecimal.ROUND_HALF_UP).doubleValue();

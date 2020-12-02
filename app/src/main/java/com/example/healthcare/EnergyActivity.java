@@ -143,7 +143,6 @@ public class EnergyActivity extends AppCompatActivity {
         WeekDesireEnergy = DayDesireEnergy * 7;
         MonthDesireEnergy = DayDesireEnergy * 30;
 
-        Log.e("TAG3", DayConsumeEnergy + "");
         energyConsumeText = findViewById(R.id.EnergyConsumeText);
         energyDesireText = findViewById(R.id.EnergyDesireText);
 
@@ -152,14 +151,12 @@ public class EnergyActivity extends AppCompatActivity {
         weekButton = (RadioButton) findViewById(R.id.weekButton);
         monthButton = (RadioButton) findViewById(R.id.monthButton);
 
-        energyConsumeText.setText(DayConsumeEnergy + "");
-        energyDesireText.setText(DayDesireEnergy + "");
 
         imageView1=findViewById(R.id.imageView1);
         imageView2=findViewById(R.id.imageView2);
         imageView3=findViewById(R.id.imageView3);
-        energyConsumeText.setText(DayConsumeEnergy + "");
-        energyDesireText.setText(DayDesireEnergy + "");
+        energyConsumeText.setText(Math.round(DayConsumeEnergy)+"");
+        energyDesireText.setText(Math.round(DayDesireEnergy )+"");
         if(DayConsumeEnergy<=DayDesireEnergy){
             imageView1.setImageResource(R.drawable.thumbup);
             imageView2.setImageResource(R.drawable.thumbup);
@@ -174,8 +171,8 @@ public class EnergyActivity extends AppCompatActivity {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 if (weekButton.getId() == checkedId) {
 
-                    energyConsumeText.setText(WeekConsumeEnergy + "");
-                    energyDesireText.setText(WeekDesireEnergy + "");
+                    energyConsumeText.setText(Math.round(WeekConsumeEnergy )+"");
+                    energyDesireText.setText(Math.round(WeekDesireEnergy )+"");
                     if(WeekConsumeEnergy<=WeekDesireEnergy){
                         imageView1.setImageResource(R.drawable.thumbup);
                         imageView2.setImageResource(R.drawable.thumbup);
@@ -187,8 +184,8 @@ public class EnergyActivity extends AppCompatActivity {
                     }
 
                 } else if (monthButton.getId() == checkedId) {
-                    energyConsumeText.setText(MonthConsumeEnergy + "");
-                    energyDesireText.setText(MonthDesireEnergy + "");
+                    energyConsumeText.setText(Math.round(MonthConsumeEnergy )+"");
+                    energyDesireText.setText(Math.round(MonthDesireEnergy)+"");
                     if(MonthConsumeEnergy<=MonthDesireEnergy){
                         imageView1.setImageResource(R.drawable.thumbup);
                         imageView2.setImageResource(R.drawable.thumbup);
@@ -200,8 +197,8 @@ public class EnergyActivity extends AppCompatActivity {
                     }
 
                 } else if (dayButton.getId() == checkedId) {
-                    energyConsumeText.setText(DayConsumeEnergy + "");
-                    energyDesireText.setText(DayDesireEnergy + "");
+                    energyConsumeText.setText(Math.round(DayConsumeEnergy )+"");
+                    energyDesireText.setText(Math.round(DayDesireEnergy )+"");
                     if(DayConsumeEnergy<=DayDesireEnergy){
                         imageView1.setImageResource(R.drawable.thumbup);
                         imageView2.setImageResource(R.drawable.thumbup);
@@ -214,8 +211,6 @@ public class EnergyActivity extends AppCompatActivity {
                 }
             }
         });
-
-
 
     }
     protected void onPause() {
