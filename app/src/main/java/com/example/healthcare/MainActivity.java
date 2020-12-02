@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Layout;
+import android.text.method.DigitsKeyListener;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -250,6 +251,10 @@ public class MainActivity extends AppCompatActivity {
             maleButton = findViewById(R.id.maleButton);
             userAge = findViewById(R.id.userAge);
             final String[] gender = {"male"};
+            userHeight.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
+            userWeight.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
+            userAge.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
+            studentID.setKeyListener(DigitsKeyListener.getInstance("0123456789"));
 
             if (!data.get(0).equals("Name")) nameUser.setText(data.get(0));
             if (!data.get(1).equals("Student ID")) studentID.setText(data.get(1));
@@ -296,6 +301,34 @@ public class MainActivity extends AppCompatActivity {
                 @Override
                 public void onClick(View v) {
                     data.set(5,gender[0]);
+                    if (! userHeight.getText().toString().isEmpty()) {
+                        try{
+                            int weight = Integer.parseInt(userHeight.getText().toString());
+                            if (weight <= 0 || weight > 300) throw new Exception();
+                            data.set(2, userHeight.getText().toString());
+                        }
+                        catch (Exception e){
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle("Invalid Data")
+                                    .setMessage("Your height should be a number between 1 to 300.")
+                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userHeight.setText(data.get(2))).create().show();
+                            return ;
+                        }
+                    }
+                    if (! userWeight.getText().toString().isEmpty()) {
+                        try{
+                            int weight = Integer.parseInt(userWeight.getText().toString());
+                            if (weight <= 0 || weight > 125) throw new Exception();
+                            data.set(3, userWeight.getText().toString());
+                        }
+                        catch (Exception e){
+                            new AlertDialog.Builder(MainActivity.this)
+                                    .setTitle("Invalid Data")
+                                    .setMessage("Your weight should be a number between 1 to 500.")
+                                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userWeight.setText(data.get(3))).create().show();
+                            return ;
+                        }
+                    }
                     if (! userAge.getText().toString().isEmpty()) {
                         try{
                             int age = Integer.parseInt(userAge.getText().toString());
@@ -304,9 +337,10 @@ public class MainActivity extends AppCompatActivity {
                         }
                         catch (Exception e){
                             new AlertDialog.Builder(MainActivity.this)
-                                    .setTitle("Wrong Format")
-                                    .setMessage("Your age should be a positive integer between 1 to 125.")
+                                    .setTitle("Invalid Data")
+                                    .setMessage("Your age should be a number between 1 to 125.")
                                     .setPositiveButton(android.R.string.yes, (arg0, arg1) -> userAge.setText(data.get(4))).create().show();
+                            return ;
                         }
                     }
                     if (! userHeight.getText().toString().isEmpty()) data.set(2, userHeight.getText().toString());

@@ -63,15 +63,15 @@ public class Plan extends AppCompatActivity {
         double advised_value=DayConsumeEnergy-standard_energy;
         double max_value=max_index*standard_energy;
         if(advised_value>0){
-            run.setText("Run: "+get_run_time(advised_value)+" h");
-            swim.setText("Swim: "+get_swim_time(advised_value)+" h");
-            bicycle.setText("Bicycle: "+get_bicyle_time(advised_value)+" h");
-            rope_skip.setText("Rope_skip: "+get_rope_skip_time(advised_value)+" h");
+            run.setText("Jogging: "+get_run_time(advised_value)+" h");
+            swim.setText("Swimming: "+get_swim_time(advised_value)+" h");
+            bicycle.setText("Cycling: "+get_bicyle_time(advised_value)+" h");
+            rope_skip.setText("Rope Skipping: "+get_rope_skip_time(advised_value)+" h");
         }else{
-            run.setText("Run: "+get_run_time(0)+" h");
-            swim.setText("Swim: "+get_swim_time(0)+" h");
-            bicycle.setText("Bicycle: "+get_bicyle_time(0)+" h");
-            rope_skip.setText("Rope_skip: "+get_rope_skip_time(0)+" h");
+            run.setText("Jogging: "+get_run_time(0)+" h");
+            swim.setText("Swimming: "+get_swim_time(0)+" h");
+            bicycle.setText("Cycling: "+get_bicyle_time(0)+" h");
+            rope_skip.setText("Rope Skipping: "+get_rope_skip_time(0)+" h");
         }
     }
     private double get_swim_time(double energy){

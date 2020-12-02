@@ -50,10 +50,9 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="0.8"
-        android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp" >
         <RadioButton
             android:id="@+id/dayButton"
             android:text="Day"
@@ -90,14 +89,14 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:id="@+id/EnergyConsumeText"
-        android:textColor="#DA9552"
+        android:textColor="@color/black"
         android:text="Consume Energy"
         android:textSize="50sp"
-
+        android:alpha="0.7"
         android:gravity="center"
         android:background="@drawable/border"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginBottom="16dp"
         />
 
@@ -109,21 +108,21 @@
         android:textColor="#DA9552"
         android:gravity="center"
 
-        android:text="Recommend"
-        android:textSize="30sp" />
+        android:text="Recommended"
+        android:textSize="40sp" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginLeft="16dp"
-        android:layout_marginRight="16dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
         android:layout_marginBottom="16dp"
-
+        android:alpha="0.7"
         android:id="@+id/EnergyDesireText"
         android:text="Desire Energy"
         android:textSize="50sp"
-        android:textColor="#DA9552"
+        android:textColor="@color/black"
         android:gravity="center"
         android:background="@drawable/border"/>
 
@@ -131,9 +130,11 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="0.8"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:layout_weight="1.2"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:paddingBottom="30dp"
         tools:context=".EnergyActivity">
 
         <ImageView

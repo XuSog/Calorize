@@ -23,6 +23,7 @@
         android:id="@+id/picture"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:paddingTop="30dp"
         android:layout_weight="2" />
 
     <LinearLayout
@@ -58,24 +59,26 @@
         android:layout_height="0dp"
         android:paddingTop="16dp"
         android:paddingBottom="16dp"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
         android:layout_weight="1">
 
     <Button
         android:id="@+id/cancelButtonFD"
         android:layout_width="0dp"
+        android:layout_marginRight="10dp"
         android:layout_height="match_parent"
         android:layout_weight="1"
-        android:background="#DA9552"
+        android:backgroundTint="#DA9552"
         android:text="Cancel" />
 
     <Button
         android:id="@+id/saveButtonFD"
         android:layout_width="0dp"
         android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
         android:layout_weight="1"
-        android:background="#DA9552"
+        android:backgroundTint="#DA9552"
         android:text="Select" />
 
     </LinearLayout>
