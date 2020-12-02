@@ -84,6 +84,13 @@ public class MainActivity extends AppCompatActivity {
             changeLayout(R.layout.profile);
         }
 
+        if (id == R.id.credit){
+            new AlertDialog.Builder(MainActivity.this)
+                    .setTitle("Credit")
+                    .setMessage("Authors:\n\nHe Haolan\nhttps://github.com/darthnoward\n\nXu Song\nhttps://github.com/XuSog\n\nWang Han\nhttps://github.com/We-here\n\nAdler\nhttps://github.com/Adler-p\n\nBaroness Placid\nhttps://github.com/placid-brain\n\n\nProject Repository:\nhttps://github.com/sys1d/Calorize")
+                    .setPositiveButton(android.R.string.yes, null).create().show();
+        }
+
         if (id == R.id.reset_settings) {
             data.clear();
             data.add("Name");

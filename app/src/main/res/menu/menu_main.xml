@@ -17,6 +17,12 @@
         app:showAsAction="never" />
 
     <item
+        android:id="@+id/credit"
+        android:orderInCategory="110"
+        android:title="Credit"
+        app:showAsAction="never" />
+
+    <item
         android:id="@+id/quit_settings"
         android:orderInCategory="120"
         android:title="Quit"
