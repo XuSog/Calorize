@@ -57,7 +57,6 @@ public class Medal_and_photo extends AppCompatActivity {
         if (app_using_days>=3){
             unlocked_medal_list.add("three_day_medal");
             unlocked_photo_list.add("1");
-
         }
 
         if (app_using_days>=7){
@@ -106,9 +105,11 @@ public class Medal_and_photo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-                Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
-                intent.putExtra("pic",R.drawable.p00);
-                startActivity(intent);
+                SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("pic", "00");
+                editor.apply();
+                finish();
 
             }
         });
@@ -117,9 +118,11 @@ public class Medal_and_photo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-                Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
-                intent.putExtra("pic",R.drawable.p01);
-                startActivity(intent);
+                SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("pic", "01");
+                editor.apply();
+                finish();
 
             }
         });
@@ -127,9 +130,11 @@ public class Medal_and_photo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-                Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
-                intent.putExtra("pic",R.drawable.p10);
-                startActivity(intent);
+                SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("pic", "10");
+                editor.apply();
+                finish();
 
             }
         });
@@ -137,9 +142,11 @@ public class Medal_and_photo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-                Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
-                intent.putExtra("pic",R.drawable.p11);
-                startActivity(intent);
+                SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("pic", "11");
+                editor.apply();
+                finish();
 
             }
         });
@@ -147,9 +154,11 @@ public class Medal_and_photo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-                Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
-                intent.putExtra("pic",R.drawable.p20);
-                startActivity(intent);
+                SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("pic", "20");
+                editor.apply();
+                finish();
 
             }
         });
@@ -157,10 +166,11 @@ public class Medal_and_photo extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 saveData();
-                Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
-                intent.putExtra("pic",R.drawable.p21);
-                startActivity(intent);
-
+                SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putString("pic", "21");
+                editor.apply();
+                finish();
             }
         });
 
@@ -229,13 +239,8 @@ public class Medal_and_photo extends AppCompatActivity {
 
     void saveData(){
         SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
-
-// Creating an Editor object
-// to edit(write to the file)
         SharedPreferences.Editor editor = sharedPreferences.edit();
 
-// Storing the key and its value
-// as the data fetched from edittext
         editor.putString("one", String.valueOf(Data.using_app_days_data));
         Gson gson = new Gson();
         String json = gson.toJson(Data.unlocked_medal_list_data);
@@ -246,9 +251,6 @@ public class Medal_and_photo extends AppCompatActivity {
         editor.putString("four", String.valueOf(Data.date_0_data));
         editor.putString("five", String.valueOf(Data.first_use));
 
-// Once the changes have been made,
-// we need to commit to apply those changes made,
-// otherwise, it will throw an error
         editor.commit();
 
     }

@@ -13,6 +13,7 @@ import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Layout;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -107,6 +108,21 @@ public class MainActivity extends AppCompatActivity {
             preferencesEditor.putString(WEEK_CONSUME_ENERGY_KEY,"0");
             preferencesEditor.putString(MONTH_CONSUME_ENERGY_KEY,"0");
             preferencesEditor.apply();
+            SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+
+            editor.putString("one", "0");
+            Gson gson = new Gson();
+            String json = gson.toJson(new ArrayList<String>());
+            editor.putString("two", json);
+            gson = new Gson();
+            json = gson.toJson(new ArrayList<String>());
+            editor.putString("three", json);
+            editor.putString("four", "easter egg");
+            editor.putString("five", "1");
+            editor.commit();
+            profileButton = findViewById(R.id.profilePic);
+            profileButton.setBackgroundResource(R.drawable.p00);
         }
 
         return super.onOptionsItemSelected(item);
@@ -126,12 +142,26 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            Bundle bundle = getIntent().getExtras();
-            if (bundle != null){
-                temp_0 = bundle.getInt("pic");
-                profileButton.setBackgroundResource(temp_0);
+            SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+            String s1 = sharedPreferences.getString("pic", "00");
+            if (s1.equals("00")){
+                profileButton.setBackgroundResource(R.drawable.p00);
             }
-
+            if (s1.equals("01")){
+                profileButton.setBackgroundResource(R.drawable.p01);
+            }
+            if (s1.equals("10")){
+                profileButton.setBackgroundResource(R.drawable.p10);
+            }
+            if (s1.equals("11")){
+                profileButton.setBackgroundResource(R.drawable.p11);
+            }
+            if (s1.equals("20")){
+                profileButton.setBackgroundResource(R.drawable.p20);
+            }
+            if (s1.equals("21")){
+                profileButton.setBackgroundResource(R.drawable.p21);
+            }
             loadData();
             TextView view = findViewById(R.id.userName);
             view.setText(data.get(0));
@@ -271,6 +301,31 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
         }
+    }
+
+    @Override
+    protected void onResume(){
+        SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+        String s1 = sharedPreferences.getString("pic", "00");
+        if (s1.equals("00")){
+            profileButton.setBackgroundResource(R.drawable.p00);
+        }
+        if (s1.equals("01")){
+            profileButton.setBackgroundResource(R.drawable.p01);
+        }
+        if (s1.equals("10")){
+            profileButton.setBackgroundResource(R.drawable.p10);
+        }
+        if (s1.equals("11")){
+            profileButton.setBackgroundResource(R.drawable.p11);
+        }
+        if (s1.equals("20")){
+            profileButton.setBackgroundResource(R.drawable.p20);
+        }
+        if (s1.equals("21")){
+            profileButton.setBackgroundResource(R.drawable.p21);
+        }
+        super.onResume();
     }
 
     private void saveData() {
