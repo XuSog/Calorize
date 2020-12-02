@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -11,6 +12,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
+import java.lang.reflect.Type;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -23,6 +30,8 @@ public class Medal_and_photo extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        loadData();
+        Data.check_status_for_medal_and_photo();
         setContentView(R.layout.medal_and_profile_photo);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
@@ -67,8 +76,8 @@ public class Medal_and_photo extends AppCompatActivity {
         b4=findViewById(R.id.b4);
         b5=findViewById(R.id.b5);
         b6=findViewById(R.id.b6);
-        if (unlocked_photo_list!=null) {
-            for (String i : unlocked_photo_list) {
+        if (Data.unlocked_photo_list_data!=null) {
+            for (String i : Data.unlocked_photo_list_data) {
                 unlock_photo(i);
                 if (i=="0"){
                     b1.setEnabled(true);
@@ -87,8 +96,8 @@ public class Medal_and_photo extends AppCompatActivity {
                 }
             }
         }
-        if (unlocked_medal_list!=null){
-            for (String i:unlocked_medal_list){
+        if (Data.unlocked_medal_list_data!=null){
+            for (String i:Data.unlocked_medal_list_data){
                 unlock_medal(i);
             }
         }
@@ -96,6 +105,7 @@ public class Medal_and_photo extends AppCompatActivity {
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveData();
                 Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
                 intent.putExtra("pic",R.drawable.p00);
                 startActivity(intent);
@@ -106,6 +116,7 @@ public class Medal_and_photo extends AppCompatActivity {
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveData();
                 Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
                 intent.putExtra("pic",R.drawable.p01);
                 startActivity(intent);
@@ -115,6 +126,7 @@ public class Medal_and_photo extends AppCompatActivity {
         b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveData();
                 Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
                 intent.putExtra("pic",R.drawable.p10);
                 startActivity(intent);
@@ -124,6 +136,7 @@ public class Medal_and_photo extends AppCompatActivity {
         b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveData();
                 Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
                 intent.putExtra("pic",R.drawable.p11);
                 startActivity(intent);
@@ -133,6 +146,7 @@ public class Medal_and_photo extends AppCompatActivity {
         b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveData();
                 Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
                 intent.putExtra("pic",R.drawable.p20);
                 startActivity(intent);
@@ -142,6 +156,7 @@ public class Medal_and_photo extends AppCompatActivity {
         b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                saveData();
                 Intent intent=new Intent (Medal_and_photo.this,MainActivity.class);
                 intent.putExtra("pic",R.drawable.p21);
                 startActivity(intent);
@@ -150,6 +165,13 @@ public class Medal_and_photo extends AppCompatActivity {
         });
 
     }
+
+    @Override
+    protected void onPause() {
+        saveData();
+        super.onPause();
+    }
+
     void unlock_medal(String str){
         ImageView i ;
         TextView x;
@@ -175,10 +197,10 @@ public class Medal_and_photo extends AppCompatActivity {
             i.setImageResource(R.drawable.one_month);
             x=findViewById(R.id.B4);
             x.setText("Keep healthy diet for 1 month (Finished already)");
-            }
-
-
         }
+
+
+    }
 
     void unlock_photo(String str){
         ImageView i;
@@ -204,5 +226,65 @@ public class Medal_and_photo extends AppCompatActivity {
         }
     }
 
+
+    void saveData(){
+        SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+
+// Creating an Editor object
+// to edit(write to the file)
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+
+// Storing the key and its value
+// as the data fetched from edittext
+        editor.putString("one", String.valueOf(Data.using_app_days_data));
+        Gson gson = new Gson();
+        String json = gson.toJson(Data.unlocked_medal_list_data);
+        editor.putString("two", json);
+        gson = new Gson();
+        json = gson.toJson(Data.unlocked_photo_list_data);
+        editor.putString("three", json);
+        editor.putString("four", String.valueOf(Data.date_0_data));
+        editor.putString("five", String.valueOf(Data.first_use));
+
+// Once the changes have been made,
+// we need to commit to apply those changes made,
+// otherwise, it will throw an error
+        editor.commit();
+
+    }
+
+    void loadData(){
+        SharedPreferences sharedPreferences = getSharedPreferences("medal data", MODE_PRIVATE);
+        String s1 = sharedPreferences.getString("one", "0");
+        Data.using_app_days_data = Integer.valueOf(s1);
+        Gson gson = new Gson();
+        String json = sharedPreferences.getString("two", null);
+        Type type = new TypeToken<ArrayList<String>>() {}.getType();
+        ArrayList<String> data = gson.fromJson(json, type);
+        if (data != null) {
+            Data.unlocked_medal_list_data = data;
+        } else{
+            Data.unlocked_medal_list_data = new ArrayList<String>();
+        }
+        gson = new Gson();
+        json = sharedPreferences.getString("three", null);
+        type = new TypeToken<ArrayList<String>>() {}.getType();
+        data = gson.fromJson(json, type);
+        if (data != null) {
+            Data.unlocked_photo_list_data = data;
+        } else{
+            Data.unlocked_photo_list_data = new ArrayList<String>();
+        }
+        s1 = sharedPreferences.getString("four", String.valueOf(new Date()));
+        SimpleDateFormat formatter = new SimpleDateFormat("EEE MMM dd HH:mm:ss Z yyyy");
+        try {
+            Date date = formatter.parse(s1);
+            Data.date_0_data = date;
+        } catch (ParseException e) {
+            Data.date_0_data = new Date();
+        }
+        s1 = sharedPreferences.getString("five", "0");
+        Data.first_use = Integer.valueOf(s1);
+    }
 
 }

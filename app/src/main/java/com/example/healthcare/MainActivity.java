@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                     .setTitle("Exit?")
                     .setMessage("Are you going to exit the app?")
                     .setNegativeButton(android.R.string.no, null)
-                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> MainActivity.super.onBackPressed()).create().show();
+                    .setPositiveButton(android.R.string.yes, (arg0, arg1) -> finish()).create().show();
         }
         else {
             changeLayout(parentLayout.get(parentLayout.size() - 1));
@@ -126,11 +126,10 @@ public class MainActivity extends AppCompatActivity {
                 }
             });
 
-            profileButton=findViewById(R.id.profilePic);
             Bundle bundle = getIntent().getExtras();
             if (bundle != null){
                 temp_0 = bundle.getInt("pic");
-                profileButton.setImageResource(temp_0);
+                profileButton.setBackgroundResource(temp_0);
             }
 
             loadData();
@@ -173,10 +172,6 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(MainActivity. this, "Please set up your information first",Toast.LENGTH_SHORT).show();
                         return;
                     }
-                   /* if (HealthySoupActivity.Get_valueof_dayconsume()==0 ||HealthySoupActivity.Get_valueof_daydesire()==0 ){
-                        Toast.makeText(MainActivity. this, "Not available before 'About Me'",Toast.LENGTH_SHORT).show();
-                        return;
-                    } */
                     Intent intent = new Intent(MainActivity.this, Plan.class);
                     startActivity(intent);
                 }
